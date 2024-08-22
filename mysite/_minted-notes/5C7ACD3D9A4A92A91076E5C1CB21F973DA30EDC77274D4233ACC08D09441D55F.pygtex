@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Question}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{question\PYGZus{}text\PYGZus{}\PYGZus{}startswith}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Quoi\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

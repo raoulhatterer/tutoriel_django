@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+django\PYGZhy{}admin startproject mysite
+\end{Verbatim}

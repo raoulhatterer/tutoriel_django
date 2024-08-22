@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{django.utils} \PYG{k+kn}{import} \PYG{n}{timezone}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{q} \PYG{o}{=} \PYG{n}{Question}\PYG{p}{(}\PYG{n}{question\PYGZus{}text}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Quoi de neuf ?\PYGZdq{}}\PYG{p}{,}
+                 \PYG{n}{pub\PYGZus{}date}\PYG{o}{=}\PYG{n}{timezone}\PYG{o}{.}\PYG{n}{now}\PYG{p}{())}
+\end{Verbatim}

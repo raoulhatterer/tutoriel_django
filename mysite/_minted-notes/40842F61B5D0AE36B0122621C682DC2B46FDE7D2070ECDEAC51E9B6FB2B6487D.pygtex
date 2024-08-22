@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+workon django5 \PYG{c+c1}{\PYGZsh{} suivant où vous avez installé Django}
+\end{Verbatim}

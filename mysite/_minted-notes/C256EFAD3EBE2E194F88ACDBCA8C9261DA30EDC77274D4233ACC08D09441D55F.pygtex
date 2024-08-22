@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Obtenez la question qui a été publiée cette année.}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{django.utils} \PYG{k+kn}{import} \PYG{n}{timezone}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{current\PYGZus{}year} \PYG{o}{=} \PYG{n}{timezone}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()}\PYG{o}{.}\PYG{n}{year}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Question}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{pub\PYGZus{}date\PYGZus{}\PYGZus{}year}\PYG{o}{=}\PYG{n}{current\PYGZus{}year}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{datetime}
+
+\PYG{k+kn}{from} \PYG{n+nn}{django.db} \PYG{k+kn}{import} \PYG{n}{models}
+\PYG{k+kn}{from} \PYG{n+nn}{django.utils} \PYG{k+kn}{import} \PYG{n}{timezone}
+
+
+\PYG{k}{class} \PYG{n+nc}{Question}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{c+c1}{\PYGZsh{} ...}
+    \PYG{k}{def} \PYG{n+nf}{was\PYGZus{}published\PYGZus{}recently}\PYG{p}{(}\PYG{n+nb+bp}{self}\PYG{p}{):} \PYG{c+c1}{\PYGZsh{} publié il y a moins d\PYGZsq{}un jour}
+        \PYG{k}{return} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{pub\PYGZus{}date} \PYG{o}{\PYGZgt{}=} \PYG{n}{timezone}\PYG{o}{.}\PYG{n}{now}\PYG{p}{()} \PYG{o}{\PYGZhy{}} \PYG{n}{datetime}\PYG{o}{.}\PYG{n}{timedelta}\PYG{p}{(}\PYG{n}{days}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+\end{Verbatim}

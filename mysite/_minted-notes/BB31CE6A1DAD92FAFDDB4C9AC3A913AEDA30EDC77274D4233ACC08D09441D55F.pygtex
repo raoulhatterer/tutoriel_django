@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{q} \PYG{o}{=} \PYG{n}{Question}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{pk}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{q}\PYG{o}{.}\PYG{n}{was\PYGZus{}published\PYGZus{}recently}\PYG{p}{()}
+\end{Verbatim}

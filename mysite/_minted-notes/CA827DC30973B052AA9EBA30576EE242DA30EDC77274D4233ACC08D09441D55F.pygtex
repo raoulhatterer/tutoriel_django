@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{polls.models} \PYG{k+kn}{import} \PYG{n}{Choice}\PYG{p}{,} \PYG{n}{Question}  \PYG{c+c1}{\PYGZsh{} Importe les modèles de l\PYGZsq{}application polls}
+\end{Verbatim}

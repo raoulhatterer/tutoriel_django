@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Choice}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{question\PYGZus{}\PYGZus{}pub\PYGZus{}date\PYGZus{}\PYGZus{}year}\PYG{o}{=}\PYG{n}{current\PYGZus{}year}\PYG{p}{)}
+\end{Verbatim}

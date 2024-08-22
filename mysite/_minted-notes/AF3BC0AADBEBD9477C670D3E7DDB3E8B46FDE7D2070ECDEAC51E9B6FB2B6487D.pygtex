@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+workon django5 \PYG{c+c1}{\PYGZsh{} si c\PYGZsq{}st le nom de votre environnement virtuel où Django est installé}
+\end{Verbatim}

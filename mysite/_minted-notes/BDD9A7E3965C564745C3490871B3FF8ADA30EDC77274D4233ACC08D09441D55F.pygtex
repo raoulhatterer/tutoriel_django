@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{INSTALLED\PYGZus{}APPS} \PYG{o}{=} \PYG{p}{[}
+    \PYG{l+s+s2}{\PYGZdq{}polls.apps.PollsConfig\PYGZdq{}}\PYG{p}{,} \PYG{c+c1}{\PYGZsh{} ajout d\PYGZsq{}une référence}
+    \PYG{l+s+s2}{\PYGZdq{}django.contrib.admin\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}django.contrib.auth\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}django.contrib.contenttypes\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}django.contrib.sessions\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}django.contrib.messages\PYGZdq{}}\PYG{p}{,}
+    \PYG{l+s+s2}{\PYGZdq{}django.contrib.staticfiles\PYGZdq{}}\PYG{p}{,}
+\PYG{p}{]}
+\end{Verbatim}

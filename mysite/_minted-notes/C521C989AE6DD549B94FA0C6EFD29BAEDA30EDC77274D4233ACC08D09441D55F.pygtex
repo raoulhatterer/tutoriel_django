@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{django.db} \PYG{k+kn}{import} \PYG{n}{models}
+
+\PYG{k}{class} \PYG{n+nc}{Question}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{n}{question\PYGZus{}text} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{200}\PYG{p}{)}    \PYG{c+c1}{\PYGZsh{} énoncé de la question}
+    \PYG{n}{pub\PYGZus{}date} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{DateTimeField}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}date published\PYGZdq{}}\PYG{p}{)}   \PYG{c+c1}{\PYGZsh{} date de publication}
+
+
+\PYG{k}{class} \PYG{n+nc}{Choice}\PYG{p}{(}\PYG{n}{models}\PYG{o}{.}\PYG{n}{Model}\PYG{p}{):}
+    \PYG{n}{question} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{ForeignKey}\PYG{p}{(}\PYG{n}{Question}\PYG{p}{,} \PYG{n}{on\PYGZus{}delete}\PYG{o}{=}\PYG{n}{models}\PYG{o}{.}\PYG{n}{CASCADE}\PYG{p}{)}
+    \PYG{c+c1}{\PYGZsh{} chaque vote (Choice) n\PYGZsq{}est relié qu\PYGZsq{}à une seule Question}
+    \PYG{n}{choice\PYGZus{}text} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{CharField}\PYG{p}{(}\PYG{n}{max\PYGZus{}length}\PYG{o}{=}\PYG{l+m+mi}{200}\PYG{p}{)}
+    \PYG{n}{votes} \PYG{o}{=} \PYG{n}{models}\PYG{o}{.}\PYG{n}{IntegerField}\PYG{p}{(}\PYG{n}{default}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+
+\end{Verbatim}

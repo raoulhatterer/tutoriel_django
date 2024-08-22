@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{c} \PYG{o}{=} \PYG{n}{q}\PYG{o}{.}\PYG{n}{choice\PYGZus{}set}\PYG{o}{.}\PYG{n}{filter}\PYG{p}{(}\PYG{n}{choice\PYGZus{}text\PYGZus{}\PYGZus{}startswith}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Just hacking\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{c}\PYG{o}{.}\PYG{n}{delete}\PYG{p}{()}
+\end{Verbatim}

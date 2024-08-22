@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZpc{} url \PYGZsq{}index\PYGZsq{}                 \PYGZpc{}\PYGZcb{}\PYGZdq{}}\PYG{p}{\PYGZgt{}}index\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZpc{} url \PYGZsq{}detail\PYGZsq{}  question\PYGZus{}id=1 \PYGZpc{}\PYGZcb{}\PYGZdq{}}\PYG{p}{\PYGZgt{}}detail\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+    \PYG{p}{\PYGZlt{}}\PYG{n+nt}{a} \PYG{n+na}{href}\PYG{o}{=}\PYG{l+s}{\PYGZdq{}\PYGZob{}\PYGZpc{} url \PYGZsq{}results\PYGZsq{} question\PYGZus{}id=1 \PYGZpc{}\PYGZcb{}\PYGZdq{}}\PYG{p}{\PYGZgt{}}results\PYG{p}{\PYGZlt{}/}\PYG{n+nt}{a}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}
