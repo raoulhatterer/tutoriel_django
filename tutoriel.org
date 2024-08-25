@@ -573,7 +573,7 @@ from django.utils import timezone
 class Question(models.Model):
     # ...
     def was_published_recently(self): # publié il y a moins d'un jour
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        return timezone.now() - datetime.timedelta(days=1) <= self.pub_date 
 
 #+end_src
 
@@ -901,6 +901,8 @@ La partie ~question_id=34~ vient de ~<int:question_id>~. En utilisant des chevro
 
 ** Écriture de vues qui font réellement des choses
 
+Source : https://docs.djangoproject.com/fr/5.0/intro/tutorial03/
+
 Chaque vue est responsable de faire une des deux choses suivantes : retourner un objet HttpResponse contenant le contenu de la page demandée, ou lever une exception, comme par exemple Http404. Le reste, c'est votre travail.
 
 Votre vue peut lire des entrées depuis une base de données, ou pas. Elle peut utiliser un système de gabarits comme celui de Django – ou un système de gabarits tiers – ou pas. Elle peut générer un fichier PDF, produire de l'XML, créer un fichier ZIP à la volée, tout ce que vous voulez, en utilisant les bibliothèques Python que vous voulez.
@@ -968,9 +970,7 @@ Ce contexte est un dictionnaire qui fait correspondre des objets Python à des n
 
 Chargez la page en appelant l'URL ~/polls/~ dans votre navigateur et vous devriez voir une liste à puces contenant des liens pointant vers la page de détail de la question sélectionnée.
 
-
 *** Codage propre avec gabarits
-
 
 Il est très courant de charger un gabarit, remplir un contexte et renvoyer un objet HttpResponse avec le résultat du gabarit interprété. Django fournit un raccourci pour cela : ~render()~
 
@@ -1002,13 +1002,15 @@ Notez qu'une fois que nous avons fait ceci dans toutes nos vues, nous n'avons pl
 
 - Il y a aussi une fonction ~get_list_or_404()~, qui fonctionne comme ~get_object_or_404()~, sauf qu'elle utilise ~filter()~ au lieu de la méthode ~get()~. Elle lève une exception Http404 si la liste est vide.
 
-
 *** Espace de noms des gabarits
 
 Il serait aussi possible de placer directement nos gabarits dans ~polls/templates~ (plutôt que dans un sous-répertoire ~polls~), mais ce serait une mauvaise idée. Django choisit le premier gabarit qu'il trouve pour un nom donné et dans le cas où vous avez un gabarit de même nom dans une autre application, Django ne fera pas la différence. Il faut pouvoir indiquer à Django le bon gabarit, et la meilleure manière de faire cela est d'utiliser des espaces de noms. C'est-à-dire que nous plaçons ces gabarits dans un autre répertoire portant le nom de l'application.
 
 
 * Écriture de formulaires
+
+Source : https://docs.djangoproject.com/fr/5.0/intro/tutorial04/
+
 ** Écriture d'un formulaire minimal
 
 Nous allons mettre à jour le gabarit de la page de détail (~polls/details.html~) du tutoriel précédent, de manière à ce que le gabarit contienne une balise HTML <form> :
@@ -1027,7 +1029,6 @@ Nous allons mettre à jour le gabarit de la page de détail (~polls/details.html
 <input type="submit" value="Vote">
 </form>
 #+end_src
-
 
 ** Un résumé rapide
 
@@ -1075,7 +1076,7 @@ Les vues ~index()~, ~detail()~ et ~results()~ sont très courtes et représenten
 
 Les vues génériques ajoutent une couche d'abstraction pour les procédés courants au point où vous n'avez même plus besoin d'écrire du code Python pour écrire une application.
 
-Les deux vues suivantes sont *les vues génériques d'affichage* ; elles sont conçues pour afficher des données. Pour beaucoup de projets, il s’agit habituellement des vues les plus fréquemment utilisées :
+Les deux vues suivantes sont *les vues génériques d'affichage* ; elles sont conçues pour afficher des données. Pour beaucoup de projets, il s'agit habituellement des vues les plus fréquemment utilisées :
 - la vue générique ~ListView~ implémente le concept d'*afficher une liste d'objets*  ;
 - la vue générique ~DetailView~ implémente celui d'*afficher une page détaillée pour un type particulier d'objet*.
 Elles sont fondées sur des classes pas sur des fonctions.
@@ -1083,7 +1084,6 @@ Elles sont fondées sur des classes pas sur des fonctions.
 Nous allons convertir notre application de sondage pour qu'elle utilise le système de vues génériques.
 
 ** Écriture de l'URLconf
-
 
 La manière la plus directe d'utiliser des vues génériques est de les créer directement dans votre configuration d'URL. Si vous ne devez changer qu'un nombre restreint d'attributs d'une vue fondée sur une classe, vous pouvez les transmettre directement dans l'appel de méthode ~as_view()~. Tout paramètre transmis à ~as_view()~ surcharge l'attribut de même nom de la classe.
 
@@ -1161,8 +1161,53 @@ De la même façon, la vue générique ~ListView~ utilise par défaut un gabarit
 
 Dans les parties précédentes de ce tutoriel, les templates ont été renseignés avec un contexte qui contenait les variables de contexte ~question~ et ~latest_question_list~. Pour ~DetailView~, la variable ~question~ est fournie automatiquement ; comme nous utilisons un modèle nommé ~Question~, Django sait donner un nom approprié à la variable de contexte. Cependant, pour ~ListView~, la variable de contexte générée automatiquement s'appelle ~question_list~. Pour changer cela, nous fournissons l'attribut ~context_object_name~ pour indiquer que nous souhaitons plutôt la nommer ~latest_question_list~. Il serait aussi possible de modifier les templates en utilisant les nouveaux nom de variables par défaut, mais il est beaucoup plus simple d'indiquer à Django les noms de variables que nous souhaitons.
 
+* Le client de test de Django
+
+Django fournit un Client de test pour simuler l'interaction d'un utilisateur avec le code au niveau des vues. On peut l'utiliser dans ~tests.py~ ou même dans le shell.
+
+Nous commencerons encore une fois par le shell, où nous devons faire quelques opérations qui ne seront pas nécessaires dans ~tests.py~. La première est de configurer l'environnement de test dans le shell:
+
+#+begin_src bash
+$ python manage.py shell
+>>> from django.test.utils import setup_test_environment
+>>> setup_test_environment()
+#+end_src
+
+
+Ensuite, il est nécessaire d'importer la classe Client de test:
+
+#+begin_src bash
+>>> from django.test import Client
+>>> # create an instance of the client for our use
+>>> client = Client()
+#+end_src
+
+Nous pouvons maintenant simuler l'interaction d'un utilisateur avec le code au niveau des vues.
+
+#+begin_src bash
+>>> # get a response from '/'
+>>> response = client.get("/")
+Not Found: /
+>>> # we should expect a 404 from that address; if you instead see an
+>>> # "Invalid HTTP_HOST header" error and a 400 response, you probably
+>>> # omitted the setup_test_environment() call described earlier.
+>>> response.status_code
+404
+>>> # on the other hand we should expect to find something at '/polls/'
+>>> # we'll use 'reverse()' rather than a hardcoded URL
+>>> from django.urls import reverse
+>>> response = client.get(reverse("polls:index"))
+>>> response.status_code
+200
+>>> response.content
+b'\n    <ul>\n    \n        <li><a href="/polls/1/">What&#x27;s up?</a></li>\n    \n    </ul>\n\n'
+>>> response.context["latest_question_list"]
+<QuerySet [<Question: What's up?>]>
+#+end_src
 
 * Introduction aux tests automatisés
+
+Source : https://docs.djangoproject.com/fr/5.0/intro/tutorial05/
 
 ** Que sont les tests automatisés ?
 
@@ -1174,6 +1219,50 @@ Vous créez une seule fois un ensemble de tests, puis au fur et à mesure des mo
 
 L'écriture de tests est bien plus rentable que de passer des heures à tester manuellement votre application ou à essayer d'identifier la cause d'un problème récemment découvert.
 
+** Création d'un test de modèle
+
+[[*Ajouter une méthode à un modèle][Nous avions ajouté]] la méthode ~was_published_recently()~ au modèle ~Question~. Elle est censée retourner ~True~ si la question a été publiée depuis moins d'un jour et ~False~ dans le cas contraire.
+
+#+begin_src python :exports code name="polls/models.py"
+class Question(models.Model):
+    # ...
+    def was_published_recently(self): # publié il y a moins d'un jour
+        return timezone.now() - datetime.timedelta(days=1) <= self.pub_date 
+
+#+end_src
+
+Le problème est que ~was_published_recently()~ renvoie ~True~ pour les questions dont ~pub_date~ est dans le futur.
+
+#+begin_src python :exports code
+time = timezone.now() + datetime.timedelta(days=30)
+future_question = Question(pub_date=time)
+#+end_src
+
+Créons un test qui permet de révéler ce bogue.
+
+Placez ce qui suit dans le fichier ~tests.py~ de l'application ~polls~ :
+
+#+begin_src python :exports code
+import datetime
+
+from django.test import TestCase
+from django.utils import timezone
+
+from .models import Question
+
+
+class QuestionModelTests(TestCase):
+    def test_was_published_recently_with_future_question(self):
+        """
+        was_published_recently() returns False for questions whose pub_date
+        is in the future.
+        """
+        time = timezone.now() + datetime.timedelta(days=30)
+        future_question = Question(pub_date=time)
+        self.assertIs(future_question.was_published_recently(), False)
+#+end_src
+
+
 ** Lancement des tests
 
 Dans le terminal, nous pouvons lancer notre test :
@@ -1181,3 +1270,144 @@ Dans le terminal, nous pouvons lancer notre test :
 #+begin_src bash
 $ python manage.py test polls
 #+end_src
+
+Ce qui va se passer:
+
+- La commande ~manage.py test polls~ va chercher des tests dans l'application ~polls~ (les méthodes de test sont celles dont le nom commence par test) ;
+- Une base de données est spécialement crée pour les tests ;
+- Dans ~test_was_published_recently_with_future_question~, une instance ~Question~ dont le champ ~pub_date~ est 30 jours dans le futur est crée ;
+- À l'aide de la méthode ~assertIs()~, le test va révéler que la méthode ~was_published_recently()~ renvoie ~True~, alors que nous souhaitons qu'elle renvoie ~False~.
+- Le test nous indique le nom du test qui a échoué ainsi que la ligne de l'assertion qui a échoué.
+  
+#+begin_src bash
+FAIL: test_was_published_recently_with_future_question (polls.tests.QuestionModelTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/path/to/mysite/polls/tests.py", line 16, in test_was_published_recently_with_future_question
+    self.assertIs(future_question.was_published_recently(), False)
+AssertionError: True is not False
+#+end_src
+
+  
+** Amélioration du modèle
+
+Corrigez la méthode dans ~models.py~ 
+
+#+begin_src python :exports code  code name="polls/models.py"
+def was_published_recently(self):
+    now = timezone.now()
+    return now - datetime.timedelta(days=1) <= self.pub_date <= now
+#+end_src
+
+Relancer les test ne révélera plus aucun problème.
+
+#+begin_src bash
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+Destroying test database for alias 'default'...
+#+end_src
+
+** Des tests de modèle plus exhaustifs
+
+Pendant que nous y sommes, ajoutons deux tests ainsi nous disposerons de trois tests qui permettent de confirmer que ~Question.was_published_recently()~ renvoie des valeurs correctes pour des questions:
+- passées (publiées depuis plus d'un jour),
+- récentes (publiées depuis moins d'un jour)
+- et futures (publiées après maintenant).
+
+#+begin_src python :exports code name="polls/tests.py"
+def test_was_published_recently_with_old_question(self):
+    """
+    was_published_recently() returns False for questions whose pub_date
+    is older than 1 day.
+    """
+    time = timezone.now() - datetime.timedelta(days=1, seconds=1)
+    old_question = Question(pub_date=time)
+    self.assertIs(old_question.was_published_recently(), False)
+
+
+def test_was_published_recently_with_recent_question(self):
+    """
+    was_published_recently() returns True for questions whose pub_date
+    is within the last day.
+    """
+    time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
+    recent_question = Question(pub_date=time)
+    self.assertIs(recent_question.was_published_recently(), True)
+#+end_src
+
+Encore une fois, ~polls~ est une application minimale, mais quelle que soit la complexité de son évolution ou le code avec lequel elle devra interagir, nous avons maintenant une certaine garantie que la méthode pour laquelle nous avons écrit des tests se comportera de façon cohérente.
+
+#+begin_src bash
+Found 3 test(s).
+Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+Destroying test database for alias 'default'...
+#+end_src
+
+** Amélioration de la vue
+
+L'application de sondage publiera toute les questions, y compris celles dont le champ ~pub_date~ est situé dans le futur. Cela est à améliorer. Définir ~pub_date~ dans le futur devrait signifier que la question sera publiée à ce moment, mais qu'elle ne doit pas être visible avant cela.
+
+[[*Écriture des vues][Nous avions introduit la vue IndexView basée sur la classe ListView]]:
+
+#+begin_src python :exportscode name="polls/views.py"
+class IndexView(generic.ListView):
+    template_name = "polls/index.html"
+    context_object_name = "latest_question_list"
+
+    def get_queryset(self):
+        """Return the last five published questions."""
+        return Question.objects.order_by("-pub_date")[:5]
+#+end_src
+
+Nous devons corriger la méthode ~get_queryset()~ pour qu'elle vérifie aussi la date en la comparant avec ~timezone.now()~.
+
+Nous devons d'abord ajouter une importation :
+
+#+begin_src python :exports code name="polls/views.py"
+from django.utils import timezone
+#+end_src
+
+
+puis nous devons corriger la méthode ~get_queryset~ de cette façon :
+
+#+begin_src python :exports code name="polls/views.py"
+def get_queryset(self):
+    """
+    Return the last five published questions (not including those set to be
+    published in the future).
+    """
+    return Question.objects.filter(pub_date__lte=timezone.now()).order_by("-pub_date")[:5]
+#+end_src
+
+~Question.objects.filter(pub_date__lte=timezone.now())~ renvoie un ~queryset~ contenant les questions dont le champ ~pub_date~ est plus petit ou égal (c'est-à-dire plus ancien ou égal) à ~timezone.now~.
+
+
+** Test de la nouvelle vue
+
+Vous pourriez maintenant vérifier vous-même que tout fonctionne comme prévu en lançant ~runserver~ et en accédant au site depuis votre navigateur. Il faudrait créer des questions avec des dates dans le passé et dans le futur et vérifier que seuls celles qui ont été publiées apparaissent dans la liste. Mais vous ne voulez pas faire ce travail de test manuel chaque fois que vous effectuez une modification qui pourrait affecter ce comportement. Créons donc aussi un test automatisé basé sur le contenu de notre session shell précédente.
+
+Ajoutez ce qui suit à ~polls/tests.py~:
+
+#+begin_src python :expect code name="polls/tests.py¶"
+from django.urls import reverse
+#+end_src
+
+
+Ce nom de fonction (~reverse~) semble particulièrement peu évocateur et intuitif, ce que l'on peut considérer comme une faute grave.
+
+Étant donné un modèle d'URL, [[*Lier les vues aux urls][nous avons vu que]] Django utilise la fonction ~path()~ pour choisir la bonne vue et générer une page. Autrement dit, /path → vue et nom de la vue/. Mais parfois, comme lors d'une redirection, vous devez aller dans le sens inverse et donner à Django le nom d'une vue, et Django génère l'URL appropriée. En d'autres termes, /nom de la vue → path/. Autrement dit ~reverse()~ fait l'inverse de la fonction ~path()~.
+
+Il s'agit d'un exemple typique de dénomination qui met l'accent sur un aspect d'une entité (par exemple une fonction) qui était au premier plan dans l'esprit du programmeur à l'époque, compte tenu de son contexte, mais qui n'est pas la dénomination la plus utile dans le contexte plus large de tout autre développeur. Nous tombons souvent dans ce piège en tant que programmeurs: la dénomination des entités est si importante pour leur découvrabilité qu'elle vaut la peine de s'y arrêter et de réfléchir aux différents contextes et de choisir celui qui est le plus approprié pour que les autres programmeurs le trouvent transparent. 
+
+Il aurait sans doute été plus transparent ici de nommer la fonction  ~pathFromViewName~ ou ~urlFromViewName~ ;  mais cela n'a pas été le cas.

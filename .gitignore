@@ -4,3 +4,5 @@
 /tutoriel.org~
 /tutoriel.tex
 /tutoriel.tex~
+*.pyc
+*/*.pyc
