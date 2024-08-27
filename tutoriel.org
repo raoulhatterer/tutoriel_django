@@ -1395,7 +1395,7 @@ def get_queryset(self):
 
 ** Test de la nouvelle vue
 
-Vous pourriez maintenant vérifier vous-même que tout fonctionne comme prévu en lançant ~runserver~ et en accédant au site depuis votre navigateur. Il faudrait créer des questions avec des dates dans le passé et dans le futur et vérifier que seuls celles qui ont été publiées apparaissent dans la liste. Mais vous ne voulez pas faire ce travail de test manuel chaque fois que vous effectuez une modification qui pourrait affecter ce comportement. Créons donc aussi un test automatisé basé sur le contenu de notre session shell précédente.
+Vous pourriez maintenant vérifier par vous-même que tout fonctionne comme prévu en lançant ~runserver~ et en accédant au site depuis votre navigateur. Il faudrait créer des questions avec des dates dans le passé et dans le futur et vérifier que seules celles qui ont été publiées apparaissent dans la liste. Mais vous ne voulez pas faire ce travail de test manuel chaque fois que vous effectuez une modification qui pourrait affecter ce comportement. Créons donc aussi un test automatisé pour tester la vue ; il sera basé sur le contenu de notre session shell précédente.
 
 Ajoutez ce qui suit à ~polls/tests.py~:
 
@@ -1404,9 +1404,9 @@ from django.urls import reverse
 #+end_src
 
 
-Ce nom de fonction (~reverse~) semble particulièrement peu évocateur et intuitif, ce que l'on peut considérer comme une faute grave.
+Ce nom de fonction (~reverse~) semble particulièrement ni évocateur ni intuitif, ce que l'on peut considérer comme une faute grave.
 
-Étant donné un modèle d'URL, [[*Lier les vues aux urls][nous avons vu que]] Django utilise la fonction ~path()~ pour choisir la bonne vue et générer une page. Autrement dit, /path → vue et nom de la vue/. Mais parfois, comme lors d'une redirection, vous devez aller dans le sens inverse et donner à Django le nom d'une vue, et Django génère l'URL appropriée. En d'autres termes, /nom de la vue → path/. Autrement dit ~reverse()~ fait l'inverse de la fonction ~path()~.
+[[*Lier les vues aux urls][Nous avons vu]], qu'étant donné un modèle d'URL, Django utilise la fonction ~path()~ pour choisir la bonne vue et générer une page. Autrement dit, /path → vue et nom de la vue/. Mais parfois, comme lors d'une redirection, vous devez aller dans le sens inverse et donner à Django le nom d'une vue, et Django génère l'URL appropriée. En d'autres termes, /nom de la vue → path/. Autrement dit ~reverse()~ fait l'inverse de la fonction ~path()~.
 
 Il s'agit d'un exemple typique de dénomination qui met l'accent sur un aspect d'une entité (par exemple une fonction) qui était au premier plan dans l'esprit du programmeur à l'époque, compte tenu de son contexte, mais qui n'est pas la dénomination la plus utile dans le contexte plus large de tout autre développeur. Nous tombons souvent dans ce piège en tant que programmeurs: la dénomination des entités est si importante pour leur découvrabilité qu'elle vaut la peine de s'y arrêter et de réfléchir aux différents contextes et de choisir celui qui est le plus approprié pour que les autres programmeurs le trouvent transparent. 
 
