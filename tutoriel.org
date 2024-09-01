@@ -1002,10 +1002,23 @@ Notez qu'une fois que nous avons fait ceci dans toutes nos vues, nous n'avons pl
 
 - Il y a aussi une fonction ~get_list_or_404()~, qui fonctionne comme ~get_object_or_404()~, sauf qu'elle utilise ~filter()~ au lieu de la méthode ~get()~. Elle lève une exception Http404 si la liste est vide.
 
-*** Espace de noms des gabarits
+*** Django et les espaces de noms (namespaces)
 
+**** Principe
 Il serait aussi possible de placer directement nos gabarits dans ~polls/templates~ (plutôt que dans un sous-répertoire ~polls~), mais ce serait une mauvaise idée. Django choisit le premier gabarit qu'il trouve pour un nom donné et dans le cas où vous avez un gabarit de même nom dans une autre application, Django ne fera pas la différence. Il faut pouvoir indiquer à Django le bon gabarit, et la meilleure manière de faire cela est d'utiliser des espaces de noms. C'est-à-dire que nous plaçons ces gabarits dans un autre répertoire portant le nom de l'application.
 
+Django permet de structurer les URLs de manière hiérarchique à l'aide d'espaces de noms (~namespaces~). Ceci est particulièrement utile lorsqu'une application Django inclut plusieurs modules (ou applications) qui peuvent avoir des vues ayant le même nom, mais qui doivent être distinguées les unes des autres.
+
+**** Exemple
+Supposons que vous ayez deux applications dans votre projet Django, appelées ~polls~ et ~blog~, et que chacune d'elles ait une vue appelée ~vote~. Sans espaces de noms, Django ne saurait pas quelle vue ~vote~ appeler. En ajoutant un espace de noms, vous pouvez les distinguer :
+  - ~polls:vote~ fait référence à la vue ~vote~ dans l'application ~polls~.
+  - ~blog:vote~ fait référence à la vue ~vote~ dans l'application ~blog~.
+
+
+Ceci est utilisé dans l'écriture ~{% url 'polls:vote' question.id %}~ qui permet à Django de comprendre qu'il doit rechercher une vue nommée ~vote~ dans l'application ou l'espace de noms ~polls~, et de construire l'URL correspondante en utilisant l'identifiant de la question (~question.id~) passé en paramètre.
+
+**** Conclusion
+Le ~:~ est donc essentiel pour spécifier l'espace de noms dans Django et pour différencier les vues lorsque vous avez des noms de vues similaires dans différentes applications.
 
 * Écriture de formulaires
 
@@ -1163,9 +1176,8 @@ Dans les parties précédentes de ce tutoriel, les templates ont été renseign�
 
 * Le client de test de Django
 
-Django fournit un Client de test pour simuler l'interaction d'un utilisateur avec le code au niveau des vues. On peut l'utiliser dans ~tests.py~ ou même dans le shell.
-
-Nous commencerons encore une fois par le shell, où nous devons faire quelques opérations qui ne seront pas nécessaires dans ~tests.py~. La première est de configurer l'environnement de test dans le shell:
+Django fournit un Client de test pour simuler l'interaction d'un utilisateur avec le code au niveau des vues.
+Avant de l'utiliser dans ~tests.py~ commencerons par voir son emploi dans le shell, où nous devons faire quelques opérations qui ne seront pas nécessaires dans ~tests.py~. La première est de configurer l'environnement de test dans le shell:
 
 #+begin_src bash
 $ python manage.py shell
