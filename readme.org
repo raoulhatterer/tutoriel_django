@@ -1,11 +1,10 @@
 * Tutoriel Django
 
-source : https://www.djangoproject.com
+#+begin_quote
+Django est un framework web Python de haut niveau qui encourage un développement rapide et une conception propre et pragmatique. Construit par des développeurs expérimentés, il s'occupe d'une grande partie des tracas du développement Web, afin que vous puissiez vous concentrer sur l'écriture de votre application sans avoir à réinventer la roue. C'est gratuit et open source. -- https://www.djangoproject.com
+#+end_quote
 
-Django est un framework web Python de haut niveau qui encourage un développement rapide et une conception propre et pragmatique. Construit par des développeurs expérimentés, il s'occupe d'une grande partie des tracas du développement Web, afin que vous puissiez vous concentrer sur l'écriture de votre application sans avoir à réinventer la roue. C'est gratuit et open source.
-
-
-Ce tutoriel est rédigé à titre personnel. Il suit le tutoriel officiel en tentant de reproduire et de comprendre les notions présentées et en rajoutant des explications sur certains points délicats.
+[[./tutoriel.org][Ce tutoriel]] est rédigé à titre personnel. Il suit le [[https://docs.djangoproject.com/en/5.1/intro/tutorial01/][tutoriel officiel]] en tentant de reproduire et de comprendre les notions présentées et en rajoutant des explications sur certains points délicats.
 
 
 
