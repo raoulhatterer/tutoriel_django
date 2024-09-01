@@ -1,3 +1,5 @@
+#+HTML_HEAD: <base target="_blank">
+
 * Tutoriel Django
 
 #+begin_quote
