@@ -172,7 +172,7 @@ Cette structure de répertoire accueillera l'application de sondage.
 *** Principe
 - Lorsqu'une page est demandée, Django crée un objet ~HttpRequest~ contenant des métadonnées au sujet de la requête.
 - Puis, Django charge la vue appropriée, lui transmettant l'objet ~HttpRequest~ comme premier paramètre.
-- Chaque vue (telle que l'entend Django) est responsable de l'**action** suivante: prendre l'objet ~HttpRequest~ (et les métadonnées) et renvoyer un objet ~HttpResponse~. Et c'est tout !
+- Chaque vue (telle que l'entend Django) est responsable de l'*action* suivante: prendre l'objet ~HttpRequest~ (et les métadonnées) et renvoyer un objet ~HttpResponse~. Et c'est tout !
 
 Remarque: par la suite, nous verrons qu'en pratique, la partie visuelle proprement dite ne relève pas des "vues" ; elle relève des "templates".
 
@@ -482,7 +482,7 @@ $ python manage.py migrate
 
 * L'interface de programmation (API)
 
-Maintenant, utilisons un **shell interactif Python** pour bénéficier de l'API que Django met gratuitement à notre disposition.
+Maintenant, utilisons un *shell interactif Python* pour bénéficier de l'API que Django met gratuitement à notre disposition.
 
 Pour lancer un shell Python, utilisez cette commande :
 #+begin_src bash
