@@ -374,10 +374,10 @@ Puis, tapez l'une des commandes suivantes:
 
 Dans la programmation orientée objet, un champ (ou attribut) est une propriété d'un objet. Cette propriété a un nom, un type de données et une valeur.
 
-Un **modèle** est la source d'information unique et définitive pour vos données. Il contient les **champs** essentiels et le comportement attendu des données que vous stockerez. Django respecte la philosophie DRY (Don't Repeat Yourself), ne vous répétez pas. Le but est de définir le modèle des données à un seul endroit, et ensuite de dériver automatiquement ce qui est nécessaire à partir de celui-ci.
+Un *modèle* est la source d'information unique et définitive pour vos données. Il contient les *champs* essentiels et le comportement attendu des données que vous stockerez. Django respecte la philosophie DRY (Don't Repeat Yourself), ne vous répétez pas. Le but est de définir le modèle des données à un seul endroit, et ensuite de dériver automatiquement ce qui est nécessaire à partir de celui-ci.
 
-- **Un modèle équivaut à une table SQL et chaque modèle est représenté par une classe Python** (qui hérite de ~django.db.models.Model~).
-- **Chaque champ correspond à une colonne dans une table SQL et chaque champ est représenté par un attribut de la classe Python correspondant au modèle.**
+- *Un modèle équivaut à une table SQL et chaque modèle est représenté par une classe Python* (qui hérite de ~django.db.models.Model~).
+- *Chaque champ correspond à une colonne dans une table SQL et chaque champ est représenté par un attribut de la classe Python correspondant au modèle.*
 
 *** Modèles dans notre application de sondage
 
