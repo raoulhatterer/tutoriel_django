@@ -98,12 +98,12 @@ mysite/
 
 On voit que le nom choisi pour le projet (ici ~mysite~) à donné lieu à la création de deux répertoires imbriqués portant ce nom. Le premier est le répertoire racine ~mysite/~ qui est un contenant pour votre projet. Son nom n'a pas d'importance pour Django ; vous pouvez, sans conséquences, le renommer comme vous le voulez par la suite. 
 
-*** Ce que contient le répertoire racine :
+*** Ce que contient le répertoire racine 
 
 - ~manage.py~ : un utilitaire en ligne de commande qui vous permet d'interagir avec ce projet Django de différentes façons.  Il fait la même chose que ~django-admin~ mais définit également la variable d'environnement ~DJANGO_SETTINGS_MODULE~ pour la faire pointer sur le fichier ~settings.py~ du projet. Généralement, en travaillant dans un seul projet Django, il est plus simple d'utiliser ~manage.py~ plutôt que ~django-admin~. Si vous devez basculer entre différents fichiers de réglages Django, utilisez la variable ~DJANGO_SETTINGS_MODULE~ ou l'option de ligne de commande ~--settings~ de la commande ~django-admin~.
 - le sous-répertoire ~mysite/~ correspond au paquet Python effectif de votre projet (le renommer est possible, mais fortement déconseillé car cela implique d'avoir à modifier tous les fichiers du projet où ~mysite~ est importé, par exemple ~manage.py~, ~wsgi.py~, ~asgi.py~ et ~settings.py~, et de mettre à jour les imports pour refléter le nouveau nom du répertoire). Donc choisissez bien le nom de votre projet à sa création.
 
-*** Ce que contient le sous répertoire :
+*** Ce que contient le sous répertoire ~mysite/~
 
 - ~__init__.py~ : un fichier vide qui indique à Python que ce répertoire doit être considéré comme un paquet.
 - ~settings.py~ : réglages et configuration de ce projet Django.
