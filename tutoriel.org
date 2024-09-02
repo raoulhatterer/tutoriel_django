@@ -60,7 +60,7 @@ Source : https://docs.djangoproject.com/fr/5.0/intro/tutorial01/
 
 
 
-** Exemple 
+** Création d'un projet contenu dans un répertoire racine 
 
 Depuis un terminal en ligne de commande, déplacez-vous à l'aide de la commande ~cd~ dans un répertoire dans lequel vous souhaitez conserver votre code, puis lancez la commande suivante :
 
@@ -71,7 +71,7 @@ django-admin startproject mysite
 Nous avons décidé ici d'appeler le projet ~mysite~ qui est un nom autorisé pour les raisons explicitées plus bas.
 
 
-** Précautions de nommage
+*** Précautions de nommage
 
 
 
@@ -79,7 +79,7 @@ Vous devez éviter de nommer vos projets en utilisant des noms réservés de Pyt
 
 Le nom ~mysite~ utilisé dans le tutoriel officiel Django est également utilisé ici. C'est un nom autorisé, mais ne donnez pas ce même nom à tous vos projets.
 
-** Fichiers créés
+*** Fichiers créés
 
 
 
@@ -96,17 +96,14 @@ mysite/
 
 
 
-On voit que le nom choisi pour le projet (ici ~mysite~) à donné lieu à la création de deux répertoires imbriqués portant ce nom.
+On voit que le nom choisi pour le projet (ici ~mysite~) à donné lieu à la création de deux répertoires imbriqués portant ce nom. Le premier est le répertoire racine ~mysite/~ qui est un contenant pour votre projet. Son nom n'a pas d'importance pour Django ; vous pouvez, sans conséquences, le renommer comme vous le voulez par la suite. 
 
-
-- Le premier répertoire racine ~mysite/~ est un contenant pour votre projet. Son nom n'a pas d'importance pour Django ; vous pouvez, sans conséquences, le renommer comme vous le voulez par la suite. 
-
-Ce que contient le répertoire racine :
+*** Ce que contient le répertoire racine :
 
 - ~manage.py~ : un utilitaire en ligne de commande qui vous permet d'interagir avec ce projet Django de différentes façons.  Il fait la même chose que ~django-admin~ mais définit également la variable d'environnement ~DJANGO_SETTINGS_MODULE~ pour la faire pointer sur le fichier ~settings.py~ du projet. Généralement, en travaillant dans un seul projet Django, il est plus simple d'utiliser ~manage.py~ plutôt que ~django-admin~. Si vous devez basculer entre différents fichiers de réglages Django, utilisez la variable ~DJANGO_SETTINGS_MODULE~ ou l'option de ligne de commande ~--settings~ de la commande ~django-admin~.
 - le sous-répertoire ~mysite/~ correspond au paquet Python effectif de votre projet (le renommer est possible, mais fortement déconseillé car cela implique d'avoir à modifier tous les fichiers du projet où ~mysite~ est importé, par exemple ~manage.py~, ~wsgi.py~, ~asgi.py~ et ~settings.py~, et de mettre à jour les imports pour refléter le nouveau nom du répertoire). Donc choisissez bien le nom de votre projet à sa création.
 
-Ce que contient ce sous répertoire :
+*** Ce que contient le sous répertoire :
 
 - ~__init__.py~ : un fichier vide qui indique à Python que ce répertoire doit être considéré comme un paquet.
 - ~settings.py~ : réglages et configuration de ce projet Django.
@@ -115,12 +112,12 @@ Ce que contient ce sous répertoire :
 - ~wsgi.py~ : un point d'entrée pour les serveurs Web compatibles WSGI pour déployer votre projet (sans intérêt pour le développement).  
 
 
-Remarque : 
+** Création d'un projet dans le répertoire actuel
 #+begin_src bash :exports code
 django-admin startproject mysite .
 #+end_src
 La commande précédente, du fait du point à la fin,  permet de créer un projet sans répertoire racine. 
-C'est donc à vous de créer un répertoire au préalable et de vous y rendre avant de créer le projet avec cette commande. 
+C'est donc à vous de créer un répertoire au préalable destiné à  contenir votre projet et de vous y rendre avant de créer le projet avec cette commande. 
 
   
 * Lancer le serveur de développement
