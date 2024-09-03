@@ -88,7 +88,7 @@ def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, "polls/results.html", {"question": question})
 
-# codage avec vues génériques fondées sur des classes
+# codage avec VUES GÉNÉRIQUES fondées sur des classes
 class IndexView(generic.ListView):
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"

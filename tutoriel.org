@@ -410,6 +410,8 @@ Chaque attribut représentant un champ de la base de données pour ce modèle.
 
 Notez que nous définissons une relation, en utilisant ~ForeignKey~. Cela indique à Django que chaque vote (~Choice~) n'est relié qu'à une seule Question. Django propose tous les modèles classiques de relations : plusieurs-à-un, plusieurs-à-plusieurs, un-à-un.
 
+Si un modèle possède un champ ~ForeignKey~, les instances du modèle de clé étrangère auront accès à un Manager renvoyant toutes les instances du premier modèle. Par défaut, ce Manager se nomme ~XXX_set~, où ~XXX~ est le nom du modèle source en minuscules (ici ~choice_set~). Ce Manager renvoie des objets ~QuerySet~, qui peuvent être filtrés et manipulés. Un ~QuerySet~ représente une collection d’objets de la base de données. Il peut comporter zéro, un ou plusieurs filtres. Les filtres réduisent les résultats de requêtes en fonction des paramètres donnés. En termes ~SQL~, un ~QuerySet~ équivaut à une commande ~SELECT~ et un filtre correspond à une clause restrictive telle que ~WHERE~ ou ~LIMIT~.
+
 Chaque autre attribut est un champ représenté par une instance d'une classe ~Field~ (par exemple, ~CharField~ pour les champs de type caractère, et ~DateTimeField~ pour les champs date et heure). Cela indique à Django le type de données que contient chaque champ.
 
 Liste des champs proposés pas Django : 
@@ -496,14 +498,27 @@ $ python manage.py shell
 
 ** Lister tous les objets (instances d'une classe de modèle)
 
-Pour lister tous les enregistrements:
+On obtient un ~QuerySet~ en utilisant le Manager du modèle. Chaque modèle a au moins un ~Manager~ ; il s’appelle ~objects~ par défaut. 
+
+
+Pour lister toutes les questions :
 #+begin_src python :exports code
+# objects.all() displays all the questions in the database.
 >>> Question.objects.all()
+<QuerySet []> # s'il n'existe aucune question
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>]> # s'il existe une question
+>>> Question.objects.all()
+<QuerySet [<Question: Question object (1)>, <Question: Question object (2)>]> # s'il existe deux questions
 #+end_src
 
+De même pour lister les choix associés à toutes les questions:
 #+begin_src python :exports code
 >>> Choice.objects.all()
 #+end_src
+
+
+
 
 ** Créer de nouveaux objets
 *** Créer une nouvelle question
@@ -526,14 +541,18 @@ Vous devez appeler ~save()~ explicitement.
 >>> q.save()
 #+end_src
 
-Maintenant la question à un ID.
+Maintenant la question a un ID puisque la commande ~migrate~ a ajouté automatiquement une clé primaire à la table des questions.
 
 #+begin_src python :exports code
 >>> q.id
 #+end_src
 
 *** Ajouter des méthodes ~__str__()~ aux modèles
+La méthode spéciale ~__str__~ permet d'indiquer la représentation en chaîne de caractères d'un objet.
+Cette chaîne de caractères est retournée lors de l'utilisation de la fonction ~str~ sur un objet ou lors de l'utilisation de la fonction ~print~.
 Il est important d'ajouter des méthodes ~__str__()~ à vos modèles, non seulement parce que c'est plus pratique lorsque vous utilisez le shell interactif, mais aussi parce que la représentation des objets est très utilisée dans l'interface d'administration automatique de Django.
+
+Modifiez ~polls/models.py~:
 
 #+begin_src python :exports code name="polls/models.py"
 from django.db import models
@@ -553,13 +572,12 @@ Dorénavant, lister les objets transmettra une liste des textes qui avaient ét�
 
 #+begin_src python :exports code
 >>> Question.objects.all()
-#+end_src
-
-#+begin_src fundamental
 <QuerySet [<Question: Quoi de neuf?>]>
 #+end_src
 
 *** Ajouter une méthode à un modèle
+
+Modifiez ~polls/models.py~:
 
 #+begin_src python :exports code name="polls/models.py"
 import datetime
@@ -577,13 +595,13 @@ class Question(models.Model):
 
 *** Afficher les choix associés à une question
 
-Sélectionnez une question :
+Sélectionnez une question grâce à la méthode ~get()~ du Manager ~objects~ :
 
 #+begin_src python :exports code
 >>> q = Question.objects.get(pk=1)
 #+end_src
 
-Afficher tous les choix associés à cette question donc aucun jusqu'à présent :
+Afficher tous les choix associés à cette question (donc aucun jusqu'à présent) grâce à la clé étrangère et au Manager ~choice_set~ :
 
 #+begin_src python :exports code
 >>> q.choice_set.all()
@@ -674,7 +692,7 @@ Et vice versa, les objets de type ~Question~ ont accès aux objets de type ~Choi
 <QuerySet [<Question: Quoi de neuf?>]>
 #+end_src
 
-La méthode ~filter()~ renvoie un objet queryset.
+La méthode ~filter()~ renvoie un objet ~QuerySet~.
 
 Si vous utilisez ~filter()~, vous le faites généralement chaque fois que vous attendez plus d'un objet correspondant à vos critères.
 
@@ -690,7 +708,7 @@ L'API suit automatiquement les relations autant que vous en avez besoin.
 Utilisez des traits de soulignement doubles pour séparer les relations.
 Cela fonctionne à autant de niveaux que vous le souhaitez ; il n'y a pas de limite.
 
-Trouvez tous les choix pour toute question dont la date_pub est cette année (en réutilisant la variable ~current_year~ que nous avons créée ci-dessus) :
+Trouvez tous les choix pour toute question dont la ~date_pub~ est cette année (en réutilisant la variable ~current_year~ que nous avons créée ci-dessus) :
 
 #+begin_src  python
 >>> Choice.objects.filter(question__pub_date__year=current_year)
