@@ -113,11 +113,12 @@ On voit que le nom choisi pour le projet (ici ~mysite~) à donné lieu à la cr�
 
 
 ** Création d'un projet dans le répertoire actuel
+Alternativement, la commande suivante, du fait du point à la fin,  permet de créer un projet sans répertoire racine. 
+C'est donc à vous de créer un répertoire au préalable destiné à  contenir votre projet et de vous y rendre avant de créer le projet avec cette commande. 
+
 #+begin_src bash :exports code
 django-admin startproject mysite .
 #+end_src
-La commande précédente, du fait du point à la fin,  permet de créer un projet sans répertoire racine. 
-C'est donc à vous de créer un répertoire au préalable destiné à  contenir votre projet et de vous y rendre avant de créer le projet avec cette commande. 
 
   
 * Lancer le serveur de développement
