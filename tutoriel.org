@@ -253,7 +253,7 @@ La fonction ~path()~ reçoit quatre paramètres, dont deux sont obligatoires : ~
 
 - Quatrième paramètre de ~path()~ : ~name~
 
- - Le nommage des URL permet de les référencer de manière non ambiguë depuis d'autres portions de code Django, en particulier depuis les gabarits. Cette fonctionnalité puissante permet d'effectuer des changements globaux dans les modèles d'URL de votre projet en ne modifiant qu'un seul fichier.
+ - Le nommage des URL permet de les référencer de manière non ambiguë depuis d'autres portions de code Django, en particulier depuis les gabarits (templates). Cette fonctionnalité puissante permet d'effectuer des changements globaux dans les modèles d'URL de votre projet en ne modifiant qu'un seul fichier.
 
 **** Sur l'utilité de ~name~ dans les gabarits utilisant ~url~
 
