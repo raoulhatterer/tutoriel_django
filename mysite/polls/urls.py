@@ -4,6 +4,9 @@ from . import views
 
 app_name = "polls"
 
+
+print(f"Je viens d'exécuter le fichier {app_name}/urls.py")
+
 urlpatterns = [
     # ex: /polls/
     path("", views.IndexView.as_view(), name="index"),

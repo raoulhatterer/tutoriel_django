@@ -331,7 +331,107 @@ Alors que ~admin.site.urls~ utilise systématiquement ~path()~ et qu'on pourrait
 
 Cela permet de structurer les URL de manière modulaire, en les séparant en plusieurs fichiers de configuration.
 
+*** Relancer le serveur
 
+Si l'on écrit ~print("Je viens d'exécuter le fichier mysite/urls.py")~ dans le fichier ~mysite/urls.py~ et que l'on écrit ~print(f"Je viens d'exécuter le fichier {app_name}/urls.py")~ dans le fichier ~polls/url.py~ puis qu'on relance le serveur, on obtient: 
+#+begin_src fundamental
+python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+Je viens d'exécuter le fichier mysite/urls.py
+Je viens d'exécuter le fichier polls/urls.py
+System check identified no issues (0 silenced).
+September 07, 2024 - 20:51:20
+Django version 5.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+#+end_src
+
+Si l'on accède ensuite à une URL de l'application ~polls~ dans le navigateur, comme http://127.0.0.1:8000/polls/ on peut constater que les ~print~ n'apparaissent pas une seconde fois.
+
+Le comportement du ~print~ dans Django est le suivant :
+
+- Le ~print~ s'exécute une seule fois au démarrage du serveur, quand le fichier Python est chargé. Après cela, Django ne recharge pas ce fichier à moins que l'on ne ne redémarre le serveur.
+- Les messages de ~print~ ne réapparaîtront pas chaque fois que l'on fait une requête HTTP à l'application. Ce comportement est dû au fait que le fichier ~polls/urls.py~ n'est pas rechargé pour chaque requête, mais seulement au moment où Django initialise les routes.
+
+Conclusion: Lorsque l'on modifie des fichiers comme ~polls/urls.py~, le serveur de développement Django ne recharge pas automatiquement ces modifications. Il faut donc redémarrer le serveur pour que les changements dans les routes soient pris en compte.
+
+Remarque: Si l'on veut qu'un message soit affiché à chaque requête lorsque l'on accèdes à ~/polls/~, il faut le placer dans la vue associée ou alors utiliser un ~middleware~.
+
+** Les middlewares
+Un middleware dans Django est une classe qui intervient dans le processus de traitement des requêtes et des réponses. Il agit comme un "intermédiaire" entre le serveur web et les vues de l'application. Les middlewares permettent de manipuler ou d'interagir avec les requêtes (avant qu'elles n'atteignent les vues) et les réponses (avant qu'elles ne soient envoyées au client).
+
+*** Fonctionnement d'un middleware
+- Requête entrante : Le middleware peut modifier ou inspecter la requête avant qu'elle ne soit transmise à la vue.
+- Réponse sortante : Il peut également modifier la réponse générée par la vue avant qu'elle ne soit renvoyée au client.
+
+*** Exemples d’utilisation courante des middlewares
+- Authentification : Vérifier si un utilisateur est authentifié avant d'accéder à certaines pages.
+- Gestion de sessions : Associer une requête à une session utilisateur.
+- Gestion de cache : Intercepter et servir des réponses depuis le cache.
+- Protection contre les attaques CSRF (Cross-Site Request Forgery), ou /falsification de requête intersites/, sont des attaques dans lesquelles un utilisateur authentifié sur un site web est trompé pour envoyer une requête non souhaitée à ce site, souvent à son insu. Cette attaque exploite la confiance qu'un site web accorde au navigateur de l'utilisateur : Ajouter des vérifications de sécurité aux requêtes.
+*** Exemple simple de middleware
+Imaginons que l'on veuille ajouter un middleware qui affiche un message à chaque requête entrante et sortante.
+
+1. Créer un fichier middleware, par exemple ~polls/middleware.py~ :
+
+#+begin_src python :exports code
+class SimpleMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+        # Ce code est exécuté une seule fois lors de l'initialisation
+
+    def __call__(self, request):
+        # Code exécuté pour chaque requête avant la vue (avant la requête)
+        print("Avant la vue")
+
+        # Appelle la vue
+        response = self.get_response(request)
+
+        # Code exécuté après que la vue ait traité la requête (avant la réponse)
+        print("Après la vue")
+
+        return response
+#+end_src    
+
+2. Ajouter le middleware dans les paramètres de Django (~settings.py~) :
+
+Dans le fichier ~settings.py~, chercher la variable ~MIDDLEWARE~ et ajouter le middleware personnalisé.
+
+#+begin_src python :exports code
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'polls.middleware.SimpleMiddleware',  # Ajout du middleware ici
+]
+#+end_src
+
+3. Redémarrer le serveur Django et accéder à une URL.
+
+À chaque requête, on verra dans la console :
+
+#+begin_src fundamental
+Avant la vue
+Après la vue
+#+end_src
+
+*** Cycle complet des middlewares
+Le cycle du middleware suit le processus suivant :
+
+- Django reçoit une requête (par exemple, une requête HTTP d’un utilisateur).
+- Le middleware intercepte cette requête avant qu’elle n’arrive à la vue.
+- La requête est transmise à la vue.
+- La vue renvoie une réponse.
+- Le middleware peut intercepter et modifier cette réponse avant qu’elle ne soit renvoyée à l’utilisateur.
+
+*** Utilité des middlewares
+Les middlewares sont extrêmement utiles pour centraliser certaines tâches répétitives, comme la journalisation des requêtes, la gestion de la sécurité, l'analyse des requêtes ou l'ajout de données spécifiques à chaque réponse.
 
 * Configuration de la base de données
 
