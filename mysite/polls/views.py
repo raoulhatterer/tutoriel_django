@@ -90,6 +90,7 @@ def results(request, question_id):
 
 # codage avec VUES GÉNÉRIQUES fondées sur des classes
 class IndexView(generic.ListView):
+    print("Lecture de la classe IndexView dans le fichier polls/views.py")
     template_name = "polls/index.html"
     context_object_name = "latest_question_list"
 

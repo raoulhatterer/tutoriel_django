@@ -331,7 +331,7 @@ Alors que ~admin.site.urls~ utilise systématiquement ~path()~ et qu'on pourrait
 
 Cela permet de structurer les URL de manière modulaire, en les séparant en plusieurs fichiers de configuration.
 
-*** Relancer le serveur
+** Relancer ou non le serveur
 
 Si l'on écrit ~print("Je viens d'exécuter le fichier mysite/urls.py")~ dans le fichier ~mysite/urls.py~ et que l'on écrit ~print(f"Je viens d'exécuter le fichier {app_name}/urls.py")~ dans le fichier ~polls/url.py~ puis qu'on relance le serveur, on obtient: 
 #+begin_src fundamental
@@ -350,14 +350,33 @@ Quit the server with CONTROL-C.
 
 Si l'on accède ensuite à une URL de l'application ~polls~ dans le navigateur, comme http://127.0.0.1:8000/polls/ on peut constater que les ~print~ n'apparaissent pas une seconde fois.
 
-Le comportement du ~print~ dans Django est le suivant :
+Le comportement de Django est le suivant :
 
-- Le ~print~ s'exécute une seule fois au démarrage du serveur, quand le fichier Python est chargé. Après cela, Django ne recharge pas ce fichier à moins que l'on ne ne redémarre le serveur.
+- Au démarrage du serveur, le fichier Python est chargé. Après cela, Django ne recharge pas ce fichier à moins que l'on ne ne redémarre le serveur.
 - Les messages de ~print~ ne réapparaîtront pas chaque fois que l'on fait une requête HTTP à l'application. Ce comportement est dû au fait que le fichier ~polls/urls.py~ n'est pas rechargé pour chaque requête, mais seulement au moment où Django initialise les routes.
 
 Conclusion: Lorsque l'on modifie des fichiers comme ~polls/urls.py~, le serveur de développement Django ne recharge pas automatiquement ces modifications. Il faut donc redémarrer le serveur pour que les changements dans les routes soient pris en compte.
 
 Remarque: Si l'on veut qu'un message soit affiché à chaque requête lorsque l'on accèdes à ~/polls/~, il faut le placer dans la vue associée ou alors utiliser un ~middleware~.
+
+Lorsque l'on modifie une vue, Django le détecte car il inclut une fonctionnalité appelée auto-reloader, qui détecte automatiquement les modifications dans certains fichiers et redémarre le serveur de développement. Si cette fonctionnalité est activée (elle l'est par défaut), Django  redémarre automatiquement que l'on modifie une vue.
+
+#+begin_src fundamental
+/Users/raoul/Google Drive/tutoriel_django/mysite/polls/views.py changed, reloading.
+Watching for file changes with StatReloader
+Performing system checks...
+
+Je viens d'exécuter le fichier mysite/urls.py
+Lecture de la classe IndexView dans le fichier polls/views.py
+Je viens d'exécuter le fichier polls/urls.py
+System check identified no issues (0 silenced).
+September 08, 2024 - 01:41:57
+Django version 5.0.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+#+end_src
+
+
 
 ** Les middlewares
 Un middleware dans Django est une classe qui intervient dans le processus de traitement des requêtes et des réponses. Il agit comme un "intermédiaire" entre le serveur web et les vues de l'application. Les middlewares permettent de manipuler ou d'interagir avec les requêtes (avant qu'elles n'atteignent les vues) et les réponses (avant qu'elles ne soient envoyées au client).
