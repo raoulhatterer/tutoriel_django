@@ -527,9 +527,9 @@ Ici, chaque modèle est représenté par une classe qui hérite de ~django.db.mo
 Chaque modèle possède des attributs (variables de classe).
 Chaque attribut représentant un champ de la base de données pour ce modèle.
 
-Notez que nous définissons une relation, en utilisant ~ForeignKey~. Cela indique à Django que chaque vote (~Choice~) n'est relié qu'à une seule Question. Django propose tous les modèles classiques de relations : plusieurs-à-un, plusieurs-à-plusieurs, un-à-un.
+Notez que nous définissons une *relation*, en utilisant ~ForeignKey~. Cela indique à Django que chaque vote (~Choice~) n'est relié qu'à une seule Question. Django propose tous les modèles classiques de relations : plusieurs-à-un, plusieurs-à-plusieurs, un-à-un.
 
-Si un modèle possède un champ ~ForeignKey~, les instances du modèle de clé étrangère auront accès à un Manager renvoyant toutes les instances du premier modèle. Par défaut, ce Manager se nomme ~XXX_set~, où ~XXX~ est le nom du modèle source en minuscules (ici ~choice_set~). Ce Manager renvoie des objets ~QuerySet~, qui peuvent être filtrés et manipulés. Un ~QuerySet~ représente une collection d’objets de la base de données. Il peut comporter zéro, un ou plusieurs filtres. Les filtres réduisent les résultats de requêtes en fonction des paramètres donnés. En termes ~SQL~, un ~QuerySet~ équivaut à une commande ~SELECT~ et un filtre correspond à une clause restrictive telle que ~WHERE~ ou ~LIMIT~.
+Si un modèle possède un champ ~ForeignKey~, les instances du modèle de clé étrangère auront accès à un /Manager/ renvoyant toutes les instances du premier modèle. Par défaut, ce /Manager/ se nomme ~XXX_set~, où ~XXX~ est le nom du modèle source en minuscules (ici le nom par défaut du /Manager/ sera donc ~choice_set~). Ce /Manager/ renvoie des objets ~QuerySet~, qui peuvent être filtrés et manipulés. Un ~QuerySet~ représente une collection d’objets de la base de données. Il peut comporter zéro, un ou plusieurs filtres. Les filtres réduisent les résultats de requêtes en fonction des paramètres donnés. *En termes ~SQL~, un ~QuerySet~ équivaut à une commande ~SELECT~* et un filtre correspond à une clause restrictive telle que ~WHERE~ ou ~LIMIT~.
 
 Chaque autre attribut est un champ représenté par une instance d'une classe ~Field~ (par exemple, ~CharField~ pour les champs de type caractère, et ~DateTimeField~ pour les champs date et heure). Cela indique à Django le type de données que contient chaque champ.
 
@@ -583,7 +583,7 @@ En exécutant ~makemigrations~, vous indiquez à Django que vous avez effectué 
 
 Vous pouvez consulter la migration pour vos nouveaux modèles si vous le voulez ; il s'agit du fichier ~polls/migrations/0001_initial.py~. Vous n'êtes pas censé les lire chaque fois que Django en crée, mais ils sont conçus pour être humainement lisibles.
 
-Les migrations sont très puissantes et permettent de gérer les changements de modèles dans le temps, au cours du développement d'un projet, sans devoir supprimer la base de données ou ses tables et en refaire de nouvelles. Une migration s'attache à mettre à jour la base de données en live, sans perte de données.
+Les migrations sont très puissantes et permettent de gérer les changements de modèles dans le temps, au cours du développement d'un projet, sans devoir supprimer la base de données ou ses tables et en refaire de nouvelles. Une migration s'attache à mettre à jour la base de données en temps réel, sans perte de données.
 
 Si cela vous intéresse, vous pouvez exécuter ~python manage.py check~ ; cette commande vérifie la conformité de votre projet sans appliquer de migration et sans toucher à la base de données.
 
@@ -601,7 +601,7 @@ $ python manage.py migrate
 
 * L'interface de programmation (API)
 
-Maintenant, utilisons un *shell interactif Python* pour bénéficier de l'API que Django met gratuitement à notre disposition.
+Maintenant, utilisons un *shell interactif Python* pour bénéficier de l'API que Django met gratuitement à notre disposition pour manipuler les données à travers les modèles.
 
 Pour lancer un shell Python, utilisez cette commande :
 #+begin_src bash
@@ -617,7 +617,8 @@ $ python manage.py shell
 
 ** Lister tous les objets (instances d'une classe de modèle)
 
-On obtient un ~QuerySet~ en utilisant le Manager du modèle. Chaque modèle a au moins un ~Manager~ ; il s’appelle ~objects~ par défaut. 
+- On obtient un ~QuerySet~ en utilisant le /Manager/ du modèle.
+- Chaque modèle a au moins un /Manager/ qui, par défaut, s’appelle ~objects~.
 
 
 Pour lister toutes les questions :

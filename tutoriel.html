@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 <head>
-<!-- 2024-09-08 Sun 01:44 -->
+<!-- 2024-09-09 Mon 02:05 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -200,176 +200,176 @@
 <h2>Table des matières</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org85658d9">1. Prérequis</a>
+<li><a href="#orgc9b4297">1. Prérequis</a>
 <ul>
-<li><a href="#orgeebcd1e">1.1. Installations</a></li>
-<li><a href="#org0b69994">1.2. Commande d'administration</a></li>
+<li><a href="#orgb1d203d">1.1. Installations</a></li>
+<li><a href="#orgda4049a">1.2. Commande d'administration</a></li>
 </ul>
 </li>
-<li><a href="#orgad6a764">2. Création d'un projet</a>
+<li><a href="#org6e300bc">2. Création d'un projet</a>
 <ul>
-<li><a href="#org734e723">2.1. Création d'un projet contenu dans un répertoire racine</a>
+<li><a href="#orga6c721e">2.1. Création d'un projet contenu dans un répertoire racine</a>
 <ul>
-<li><a href="#org37e0dc0">2.1.1. Précautions de nommage</a></li>
-<li><a href="#orgbb7de01">2.1.2. Fichiers créés</a></li>
-<li><a href="#org0f1e474">2.1.3. Ce que contient le répertoire racine</a></li>
-<li><a href="#orgc7afb91">2.1.4. Ce que contient le sous répertoire <code>mysite/</code></a></li>
+<li><a href="#org64b2d16">2.1.1. Précautions de nommage</a></li>
+<li><a href="#orga771d2d">2.1.2. Fichiers créés</a></li>
+<li><a href="#org6d3fcf7">2.1.3. Ce que contient le répertoire racine</a></li>
+<li><a href="#orgcf4dbb0">2.1.4. Ce que contient le sous répertoire <code>mysite/</code></a></li>
 </ul>
 </li>
-<li><a href="#org2d052b9">2.2. Création d'un projet dans le répertoire actuel</a></li>
+<li><a href="#orgea96f17">2.2. Création d'un projet dans le répertoire actuel</a></li>
 </ul>
 </li>
-<li><a href="#org2a11e69">3. Lancer le serveur de développement</a>
+<li><a href="#org88a8d71">3. Lancer le serveur de développement</a>
 <ul>
-<li><a href="#orgfcc1beb">3.1. Avertissement</a></li>
-<li><a href="#org731ebd8">3.2. Commande pour lancer le serveur de développement</a></li>
+<li><a href="#orge2658a1">3.1. Avertissement</a></li>
+<li><a href="#org94e1bf4">3.2. Commande pour lancer le serveur de développement</a></li>
 </ul>
 </li>
-<li><a href="#orgd706e6c">4. Création d'une application</a>
+<li><a href="#org45acc5f">4. Création d'une application</a>
 <ul>
-<li><a href="#org3b5e907">4.1. Différence entre un projet et une application</a></li>
-<li><a href="#org8755819">4.2. Création d'une application</a></li>
-<li><a href="#org7021b50">4.3. Créations des vues</a>
+<li><a href="#orga515bc3">4.1. Différence entre un projet et une application</a></li>
+<li><a href="#org4663ffb">4.2. Création d'une application</a></li>
+<li><a href="#org040752d">4.3. Créations des vues</a>
 <ul>
-<li><a href="#orga867ed0">4.3.1. Principe</a></li>
-<li><a href="#org9a4ddca">4.3.2. Exemple</a></li>
+<li><a href="#orgc361284">4.3.1. Principe</a></li>
+<li><a href="#orgba63e32">4.3.2. Exemple</a></li>
 </ul>
 </li>
-<li><a href="#orgc873f7a">4.4. Lier les vues aux urls</a>
+<li><a href="#orgeebaec5">4.4. Lier les vues aux urls</a>
 <ul>
-<li><a href="#orgd4e2bf5">4.4.1. Principe</a></li>
-<li><a href="#org16a6f79">4.4.2. Définir une URLconf pour l'application</a></li>
-<li><a href="#org7dc3c18">4.4.3. Inclure l'URLconf de l'application dans l'URLconf globale du projet</a></li>
+<li><a href="#org90d0fd6">4.4.1. Principe</a></li>
+<li><a href="#org2252dcb">4.4.2. Définir une URLconf pour l'application</a></li>
+<li><a href="#orgc87f3ba">4.4.3. Inclure l'URLconf de l'application dans l'URLconf globale du projet</a></li>
 </ul>
 </li>
-<li><a href="#orga612fb8">4.5. Relancer ou non le serveur</a></li>
-<li><a href="#org0acf4d4">4.6. Les middlewares</a>
+<li><a href="#org2ab5fa9">4.5. Relancer ou non le serveur</a></li>
+<li><a href="#org50b88dd">4.6. Les middlewares</a>
 <ul>
-<li><a href="#orga6130ac">4.6.1. Fonctionnement d'un middleware</a></li>
-<li><a href="#org769e999">4.6.2. Exemples d’utilisation courante des middlewares</a></li>
-<li><a href="#org90c7107">4.6.3. Exemple simple de middleware</a></li>
-<li><a href="#orgad16927">4.6.4. Cycle complet des middlewares</a></li>
-<li><a href="#orge47fe76">4.6.5. Utilité des middlewares</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org8d4eb4a">5. Configuration de la base de données</a>
-<ul>
-<li><a href="#orge0e9c3b">5.1. Choix de la base de données</a></li>
-<li><a href="#org6fb0bdc">5.2. Création des tables associées</a></li>
-<li><a href="#orgdb678f3">5.3. Examen des tables de votre base de données</a></li>
-<li><a href="#org41fc9b9">5.4. Création des modèles</a>
-<ul>
-<li><a href="#org9f42f03">5.4.1. Philosophie des modèles</a></li>
-<li><a href="#orgdd04a3e">5.4.2. Modèles dans notre application de sondage</a></li>
+<li><a href="#orgabf067e">4.6.1. Fonctionnement d'un middleware</a></li>
+<li><a href="#org2f2ed62">4.6.2. Exemples d’utilisation courante des middlewares</a></li>
+<li><a href="#orga7a0473">4.6.3. Exemple simple de middleware</a></li>
+<li><a href="#orgac075e5">4.6.4. Cycle complet des middlewares</a></li>
+<li><a href="#org5b198f5">4.6.5. Utilité des middlewares</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org170c53a">6. Inclure l'application au projet</a>
+<li><a href="#orge15d023">5. Configuration de la base de données</a>
 <ul>
-<li><a href="#orgcd602fd">6.1. Philosophie</a></li>
-<li><a href="#org4b49627">6.2. Étape 1 : créer ou modifier les modèles</a></li>
-<li><a href="#orge33a274">6.3. Étape 2 : créer des migrations correspondant à ces changements</a></li>
-<li><a href="#org4634211">6.4. Étape 3 : appliquer ces modifications à la base de données</a></li>
-</ul>
-</li>
-<li><a href="#orge953abe">7. L'interface de programmation (API)</a>
+<li><a href="#orgda011a8">5.1. Choix de la base de données</a></li>
+<li><a href="#org8f12721">5.2. Création des tables associées</a></li>
+<li><a href="#org65f5c90">5.3. Examen des tables de votre base de données</a></li>
+<li><a href="#org345639f">5.4. Création des modèles</a>
 <ul>
-<li><a href="#org7d93a29">7.1. Importer les modèles d'une application</a></li>
-<li><a href="#org6484db3">7.2. Lister tous les objets (instances d'une classe de modèle)</a></li>
-<li><a href="#org1127134">7.3. Créer de nouveaux objets</a>
-<ul>
-<li><a href="#orga076d98">7.3.1. Créer une nouvelle question</a></li>
-<li><a href="#orgaed6d69">7.3.2. Sauvegarder une question dans la base de données</a></li>
-<li><a href="#orgf0018cb">7.3.3. Ajouter des méthodes <code>__str__()</code> aux modèles</a></li>
-<li><a href="#org899bf2d">7.3.4. Ajouter une méthode à un modèle</a></li>
-<li><a href="#org6763144">7.3.5. Afficher les choix associés à une question</a></li>
-<li><a href="#orgd324fa3">7.3.6. Créer de nouveaux choix associés à une question</a></li>
-<li><a href="#org974826e">7.3.7. Relations</a></li>
-</ul>
-</li>
-<li><a href="#org556a67f">7.4. Filtrer</a>
-<ul>
-<li><a href="#orgc1db31a">7.4.1. Filtrer les enregistrements par valeur de champ</a></li>
-<li><a href="#org3b97fac">7.4.2. Filtrer les choix</a></li>
-<li><a href="#orgb45993f">7.4.3. Filtrer puis supprimer</a></li>
-</ul>
-</li>
-<li><a href="#org7392366">7.5. Obtenir un objet</a></li>
-<li><a href="#orge4bb763">7.6. Raccourci pour obtenir un objet par clé primaire</a></li>
-</ul>
-</li>
-<li><a href="#org7037127">8. Introduction au site d'administration de Django</a>
-<ul>
-<li><a href="#orgf73cc0a">8.1. Philosophie</a></li>
-<li><a href="#org09346d1">8.2. Création d'un utilisateur administrateur</a></li>
-<li><a href="#org2a3f677">8.3. Démarrage du serveur de développement</a></li>
-<li><a href="#orgb0399f0">8.4. Rendre l'application de sondage modifiable via l'interface d'admin</a></li>
-</ul>
-</li>
-<li><a href="#org48a3a49">9. Création de l'interface publique (les vues)</a>
-<ul>
-<li><a href="#org8489646">9.1. Aperçu</a></li>
-<li><a href="#orgb26b8da">9.2. Écriture de vues supplémentaires</a></li>
-<li><a href="#org94eaaea">9.3. Transmission de paramètres aux vues</a></li>
-<li><a href="#org240c188">9.4. Écriture de vues qui font réellement des choses</a>
-<ul>
-<li><a href="#org6863f32">9.4.1. Codage en dur sans gabarit</a></li>
-<li><a href="#orgade2283">9.4.2. Codage avec gabarits</a></li>
-<li><a href="#org7840d9d">9.4.3. Codage propre avec gabarits</a></li>
-</ul>
-</li>
-<li><a href="#org17781d5">9.5. Django et les espaces de noms (namespaces)</a>
-<ul>
-<li><a href="#org705b906">9.5.1. Philosophie</a></li>
-<li><a href="#orged97e8d">9.5.2. Exemple</a></li>
-<li><a href="#orgdfe66a9">9.5.3. Conclusion</a></li>
+<li><a href="#orgb6730d3">5.4.1. Philosophie des modèles</a></li>
+<li><a href="#orga64f3af">5.4.2. Modèles dans notre application de sondage</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org73c7b54">10. Écriture de formulaires</a>
+<li><a href="#org04ad133">6. Inclure l'application au projet</a>
 <ul>
-<li><a href="#orgb79702a">10.1. Écriture d'un formulaire minimal</a></li>
-<li><a href="#org4496b51">10.2. Un résumé rapide</a></li>
+<li><a href="#org216cbeb">6.1. Philosophie</a></li>
+<li><a href="#org770885b">6.2. Étape 1 : créer ou modifier les modèles</a></li>
+<li><a href="#org021b7b3">6.3. Étape 2 : créer des migrations correspondant à ces changements</a></li>
+<li><a href="#org2c13fa8">6.4. Étape 3 : appliquer ces modifications à la base de données</a></li>
 </ul>
 </li>
-<li><a href="#orgd26d4e3">11. Affichage des résultats</a>
+<li><a href="#orgc1ddfc8">7. L'interface de programmation (API)</a>
 <ul>
-<li><a href="#orga5f1a26">11.1. Réécrivons la vue <code>results()</code> dans <code>polls/views.py</code> :</a></li>
-<li><a href="#orgc8c7ce7">11.2. Écrivons maintenant le gabarit <code>polls/results.html</code> :</a></li>
+<li><a href="#orgc3d1267">7.1. Importer les modèles d'une application</a></li>
+<li><a href="#org771b050">7.2. Lister tous les objets (instances d'une classe de modèle)</a></li>
+<li><a href="#org3893544">7.3. Créer de nouveaux objets</a>
+<ul>
+<li><a href="#orgc1bb28f">7.3.1. Créer une nouvelle question</a></li>
+<li><a href="#org23700b5">7.3.2. Sauvegarder une question dans la base de données</a></li>
+<li><a href="#org8833c68">7.3.3. Ajouter des méthodes <code>__str__()</code> aux modèles</a></li>
+<li><a href="#org47b4a93">7.3.4. Ajouter une méthode à un modèle</a></li>
+<li><a href="#org31d9f5c">7.3.5. Afficher les choix associés à une question</a></li>
+<li><a href="#orgdc935f0">7.3.6. Créer de nouveaux choix associés à une question</a></li>
+<li><a href="#orgec49fd7">7.3.7. Relations</a></li>
 </ul>
 </li>
-<li><a href="#orga2a7dab">12. Utilisation des vues génériques</a>
+<li><a href="#orgca96070">7.4. Filtrer</a>
 <ul>
-<li><a href="#orgcd3d129">12.1. Écriture de l'URLconf</a></li>
-<li><a href="#org64254b6">12.2. Écriture des vues</a></li>
+<li><a href="#org7e64310">7.4.1. Filtrer les enregistrements par valeur de champ</a></li>
+<li><a href="#orge2ffe74">7.4.2. Filtrer les choix</a></li>
+<li><a href="#org9dfa657">7.4.3. Filtrer puis supprimer</a></li>
 </ul>
 </li>
-<li><a href="#org5af2cfd">13. Le client de test de Django</a></li>
-<li><a href="#orge99b0f0">14. Introduction aux tests automatisés</a>
+<li><a href="#orgff92368">7.5. Obtenir un objet</a></li>
+<li><a href="#org09597d2">7.6. Raccourci pour obtenir un objet par clé primaire</a></li>
+</ul>
+</li>
+<li><a href="#orgeda0d39">8. Introduction au site d'administration de Django</a>
 <ul>
-<li><a href="#org7d4fc97">14.1. Que sont les tests automatisés ?</a></li>
-<li><a href="#org5713482">14.2. Création d'un test de modèle</a></li>
-<li><a href="#orgb6dca79">14.3. Lancement des tests</a></li>
-<li><a href="#orgde8ddf3">14.4. Amélioration du modèle</a></li>
-<li><a href="#orgefb0bc4">14.5. Des tests de modèle plus exhaustifs</a></li>
-<li><a href="#org4adc8a9">14.6. Amélioration de la vue</a></li>
-<li><a href="#orgd216ed1">14.7. Test de la nouvelle vue</a></li>
+<li><a href="#org4715d4d">8.1. Philosophie</a></li>
+<li><a href="#orge101de4">8.2. Création d'un utilisateur administrateur</a></li>
+<li><a href="#orgf9d6c0f">8.3. Démarrage du serveur de développement</a></li>
+<li><a href="#orga88c8ba">8.4. Rendre l'application de sondage modifiable via l'interface d'admin</a></li>
+</ul>
+</li>
+<li><a href="#orgdd04947">9. Création de l'interface publique (les vues)</a>
+<ul>
+<li><a href="#orga77630d">9.1. Aperçu</a></li>
+<li><a href="#orgdde2c5e">9.2. Écriture de vues supplémentaires</a></li>
+<li><a href="#orga780273">9.3. Transmission de paramètres aux vues</a></li>
+<li><a href="#orgd680ecb">9.4. Écriture de vues qui font réellement des choses</a>
+<ul>
+<li><a href="#org99e51e0">9.4.1. Codage en dur sans gabarit</a></li>
+<li><a href="#orgf81edec">9.4.2. Codage avec gabarits</a></li>
+<li><a href="#org69ed735">9.4.3. Codage propre avec gabarits</a></li>
+</ul>
+</li>
+<li><a href="#org84182a1">9.5. Django et les espaces de noms (namespaces)</a>
+<ul>
+<li><a href="#org45961f6">9.5.1. Philosophie</a></li>
+<li><a href="#org3b6e4f9">9.5.2. Exemple</a></li>
+<li><a href="#org2cbbfcc">9.5.3. Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2e244d8">10. Écriture de formulaires</a>
+<ul>
+<li><a href="#orgbc7017b">10.1. Écriture d'un formulaire minimal</a></li>
+<li><a href="#org92afcde">10.2. Un résumé rapide</a></li>
+</ul>
+</li>
+<li><a href="#org1d37b8a">11. Affichage des résultats</a>
+<ul>
+<li><a href="#org71e401c">11.1. Réécrivons la vue <code>results()</code> dans <code>polls/views.py</code> :</a></li>
+<li><a href="#org7525369">11.2. Écrivons maintenant le gabarit <code>polls/results.html</code> :</a></li>
+</ul>
+</li>
+<li><a href="#org8ec85b9">12. Utilisation des vues génériques</a>
+<ul>
+<li><a href="#orgd2decb5">12.1. Écriture de l'URLconf</a></li>
+<li><a href="#org76050a6">12.2. Écriture des vues</a></li>
+</ul>
+</li>
+<li><a href="#org61f3adf">13. Le client de test de Django</a></li>
+<li><a href="#org82f2541">14. Introduction aux tests automatisés</a>
+<ul>
+<li><a href="#orgfc91e0b">14.1. Que sont les tests automatisés ?</a></li>
+<li><a href="#org8ae76a0">14.2. Création d'un test de modèle</a></li>
+<li><a href="#org9625e95">14.3. Lancement des tests</a></li>
+<li><a href="#org91f4ed0">14.4. Amélioration du modèle</a></li>
+<li><a href="#orgbc10208">14.5. Des tests de modèle plus exhaustifs</a></li>
+<li><a href="#orgcd39634">14.6. Amélioration de la vue</a></li>
+<li><a href="#org75f1546">14.7. Test de la nouvelle vue</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org85658d9" class="outline-2">
-<h2 id="org85658d9"><span class="section-number-2">1.</span> Prérequis</h2>
+<div id="outline-container-orgc9b4297" class="outline-2">
+<h2 id="orgc9b4297"><span class="section-number-2">1.</span> Prérequis</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgeebcd1e" class="outline-3">
-<h3 id="orgeebcd1e"><span class="section-number-3">1.1.</span> Installations</h3>
+<div id="outline-container-orgb1d203d" class="outline-3">
+<h3 id="orgb1d203d"><span class="section-number-3">1.1.</span> Installations</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Après avoir installé Django (par exemple dans un environnement virtuel nommé <code>django5</code>), si vous disposez de virtualenvwrapper, activez l'environnement virtuel dans un terminal en ligne de commande avec :
@@ -394,8 +394,8 @@ Ne pas utiliser d'environnement virtuel est également possible.
 </div>
 
 
-<div id="outline-container-org0b69994" class="outline-3">
-<h3 id="org0b69994"><span class="section-number-3">1.2.</span> Commande d'administration</h3>
+<div id="outline-container-orgda4049a" class="outline-3">
+<h3 id="orgda4049a"><span class="section-number-3">1.2.</span> Commande d'administration</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 <code>django-admin</code> est l'utilitaire en ligne de commande de Django pour les tâches administratives.
@@ -441,8 +441,8 @@ testserver
 
 
 
-<div id="outline-container-orgad6a764" class="outline-2">
-<h2 id="orgad6a764"><span class="section-number-2">2.</span> Création d'un projet</h2>
+<div id="outline-container-org6e300bc" class="outline-2">
+<h2 id="org6e300bc"><span class="section-number-2">2.</span> Création d'un projet</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Source : <a href="https://docs.djangoproject.com/fr/5.0/intro/tutorial01/">https://docs.djangoproject.com/fr/5.0/intro/tutorial01/</a>
@@ -451,8 +451,8 @@ Source : <a href="https://docs.djangoproject.com/fr/5.0/intro/tutorial01/">https
 
 
 
-<div id="outline-container-org734e723" class="outline-3">
-<h3 id="org734e723"><span class="section-number-3">2.1.</span> Création d'un projet contenu dans un répertoire racine</h3>
+<div id="outline-container-orga6c721e" class="outline-3">
+<h3 id="orga6c721e"><span class="section-number-3">2.1.</span> Création d'un projet contenu dans un répertoire racine</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Depuis un terminal en ligne de commande, déplacez-vous à l'aide de la commande <code>cd</code> dans un répertoire dans lequel vous souhaitez conserver votre code, puis lancez la commande suivante :
@@ -469,8 +469,8 @@ Nous avons décidé ici d'appeler le projet <code>mysite</code> qui est un nom a
 </div>
 
 
-<div id="outline-container-org37e0dc0" class="outline-4">
-<h4 id="org37e0dc0"><span class="section-number-4">2.1.1.</span> Précautions de nommage</h4>
+<div id="outline-container-org64b2d16" class="outline-4">
+<h4 id="org64b2d16"><span class="section-number-4">2.1.1.</span> Précautions de nommage</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <p>
 Vous devez éviter de nommer vos projets en utilisant des noms réservés de Python ou des noms de composants de Django. Cela signifie en particulier que vous devez éviter d'utiliser des noms comme <b>django</b> (qui entrerait en conflit avec Django lui-même) ou <b>test</b> (qui entrerait en conflit avec un composant intégré de Python).
@@ -482,8 +482,8 @@ Le nom <code>mysite</code> utilisé dans le tutoriel officiel Django est égalem
 </div>
 </div>
 
-<div id="outline-container-orgbb7de01" class="outline-4">
-<h4 id="orgbb7de01"><span class="section-number-4">2.1.2.</span> Fichiers créés</h4>
+<div id="outline-container-orga771d2d" class="outline-4">
+<h4 id="orga771d2d"><span class="section-number-4">2.1.2.</span> Fichiers créés</h4>
 <div class="outline-text-4" id="text-2-1-2">
 <div class="org-src-container">
 <pre class="src src-fundamental">mysite/
@@ -505,8 +505,8 @@ On voit que le nom choisi pour le projet (ici <code>mysite</code>) à donné lie
 </div>
 </div>
 
-<div id="outline-container-org0f1e474" class="outline-4">
-<h4 id="org0f1e474"><span class="section-number-4">2.1.3.</span> Ce que contient le répertoire racine</h4>
+<div id="outline-container-org6d3fcf7" class="outline-4">
+<h4 id="org6d3fcf7"><span class="section-number-4">2.1.3.</span> Ce que contient le répertoire racine</h4>
 <div class="outline-text-4" id="text-2-1-3">
 <ul class="org-ul">
 <li><code>manage.py</code> : un utilitaire en ligne de commande qui vous permet d'interagir avec ce projet Django de différentes façons.  Il fait la même chose que <code>django-admin</code> mais définit également la variable d'environnement <code>DJANGO_SETTINGS_MODULE</code> pour la faire pointer sur le fichier <code>settings.py</code> du projet. Généralement, en travaillant dans un seul projet Django, il est plus simple d'utiliser <code>manage.py</code> plutôt que <code>django-admin</code>. Si vous devez basculer entre différents fichiers de réglages Django, utilisez la variable <code>DJANGO_SETTINGS_MODULE</code> ou l'option de ligne de commande <code>--settings</code> de la commande <code>django-admin</code>.</li>
@@ -515,8 +515,8 @@ On voit que le nom choisi pour le projet (ici <code>mysite</code>) à donné lie
 </div>
 </div>
 
-<div id="outline-container-orgc7afb91" class="outline-4">
-<h4 id="orgc7afb91"><span class="section-number-4">2.1.4.</span> Ce que contient le sous répertoire <code>mysite/</code></h4>
+<div id="outline-container-orgcf4dbb0" class="outline-4">
+<h4 id="orgcf4dbb0"><span class="section-number-4">2.1.4.</span> Ce que contient le sous répertoire <code>mysite/</code></h4>
 <div class="outline-text-4" id="text-2-1-4">
 <ul class="org-ul">
 <li><code>__init__.py</code> : un fichier vide qui indique à Python que ce répertoire doit être considéré comme un paquet.</li>
@@ -530,8 +530,8 @@ On voit que le nom choisi pour le projet (ici <code>mysite</code>) à donné lie
 </div>
 
 
-<div id="outline-container-org2d052b9" class="outline-3">
-<h3 id="org2d052b9"><span class="section-number-3">2.2.</span> Création d'un projet dans le répertoire actuel</h3>
+<div id="outline-container-orgea96f17" class="outline-3">
+<h3 id="orgea96f17"><span class="section-number-3">2.2.</span> Création d'un projet dans le répertoire actuel</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Alternativement, la commande suivante, du fait du point à la fin,  permet de créer un projet sans répertoire racine. 
@@ -547,20 +547,20 @@ C'est donc à vous de créer un répertoire au préalable destiné à  contenir 
 </div>
 
 
-<div id="outline-container-org2a11e69" class="outline-2">
-<h2 id="org2a11e69"><span class="section-number-2">3.</span> Lancer le serveur de développement</h2>
+<div id="outline-container-org88a8d71" class="outline-2">
+<h2 id="org88a8d71"><span class="section-number-2">3.</span> Lancer le serveur de développement</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-orgfcc1beb" class="outline-3">
-<h3 id="orgfcc1beb"><span class="section-number-3">3.1.</span> Avertissement</h3>
+<div id="outline-container-orge2658a1" class="outline-3">
+<h3 id="orge2658a1"><span class="section-number-3">3.1.</span> Avertissement</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 N'utilisez jamais le serveur de développement pour quoi que ce soit qui s'approche d'un environnement de production. Il est fait seulement pour tester votre travail pendant le développement.
 </p>
 </div>
 </div>
-<div id="outline-container-org731ebd8" class="outline-3">
-<h3 id="org731ebd8"><span class="section-number-3">3.2.</span> Commande pour lancer le serveur de développement</h3>
+<div id="outline-container-org94e1bf4" class="outline-3">
+<h3 id="org94e1bf4"><span class="section-number-3">3.2.</span> Commande pour lancer le serveur de développement</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Depuis un terminal en ligne de commande, déplacez-vous à l'aide de la commande <code>cd</code> dans un répertoire dans lequel vous souhaitez avez placé votre projet, puis lancez la commande suivante :
@@ -580,12 +580,12 @@ Quit the server with CONTROL-C.
 </div>
 
 
-<div id="outline-container-orgd706e6c" class="outline-2">
-<h2 id="orgd706e6c"><span class="section-number-2">4.</span> Création d'une application</h2>
+<div id="outline-container-org45acc5f" class="outline-2">
+<h2 id="org45acc5f"><span class="section-number-2">4.</span> Création d'une application</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org3b5e907" class="outline-3">
-<h3 id="org3b5e907"><span class="section-number-3">4.1.</span> Différence entre un projet et une application</h3>
+<div id="outline-container-orga515bc3" class="outline-3">
+<h3 id="orga515bc3"><span class="section-number-3">4.1.</span> Différence entre un projet et une application</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Un projet est un ensemble de réglages et d'applications pour un site Web particulier.</li>
@@ -596,8 +596,8 @@ Quit the server with CONTROL-C.
 </div>
 </div>
 
-<div id="outline-container-org8755819" class="outline-3">
-<h3 id="org8755819"><span class="section-number-3">4.2.</span> Création d'une application</h3>
+<div id="outline-container-org4663ffb" class="outline-3">
+<h3 id="org4663ffb"><span class="section-number-3">4.2.</span> Création d'une application</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Pour créer votre application, assurez vous d'être dans le même répertoire que <code>manage.py</code> et saisissez cette commande :
@@ -630,12 +630,12 @@ Cette structure de répertoire accueillera l'application de sondage.
 </div>
 </div>
 
-<div id="outline-container-org7021b50" class="outline-3">
-<h3 id="org7021b50"><span class="section-number-3">4.3.</span> Créations des vues</h3>
+<div id="outline-container-org040752d" class="outline-3">
+<h3 id="org040752d"><span class="section-number-3">4.3.</span> Créations des vues</h3>
 <div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-orga867ed0" class="outline-4">
-<h4 id="orga867ed0"><span class="section-number-4">4.3.1.</span> Principe</h4>
+<div id="outline-container-orgc361284" class="outline-4">
+<h4 id="orgc361284"><span class="section-number-4">4.3.1.</span> Principe</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <ul class="org-ul">
 <li>Lorsqu'une page est demandée, Django crée un objet <code>HttpRequest</code> contenant des métadonnées au sujet de la requête.</li>
@@ -649,8 +649,8 @@ Remarque: par la suite, nous verrons qu'en pratique, la partie visuelle propreme
 </div>
 </div>
 
-<div id="outline-container-org9a4ddca" class="outline-4">
-<h4 id="org9a4ddca"><span class="section-number-4">4.3.2.</span> Exemple</h4>
+<div id="outline-container-orgba63e32" class="outline-4">
+<h4 id="orgba63e32"><span class="section-number-4">4.3.2.</span> Exemple</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <p>
 Ouvrez le fichier <code>polls/views.py</code> et placez-y le code Python suivant :
@@ -686,12 +686,12 @@ La première vue est la vue la plus basique possible dans Django.
 </div>
 </div>
 
-<div id="outline-container-orgc873f7a" class="outline-3">
-<h3 id="orgc873f7a"><span class="section-number-3">4.4.</span> Lier les vues aux urls</h3>
+<div id="outline-container-orgeebaec5" class="outline-3">
+<h3 id="orgeebaec5"><span class="section-number-3">4.4.</span> Lier les vues aux urls</h3>
 <div class="outline-text-3" id="text-4-4">
 </div>
-<div id="outline-container-orgd4e2bf5" class="outline-4">
-<h4 id="orgd4e2bf5"><span class="section-number-4">4.4.1.</span> Principe</h4>
+<div id="outline-container-org90d0fd6" class="outline-4">
+<h4 id="org90d0fd6"><span class="section-number-4">4.4.1.</span> Principe</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <p>
 Pour accéder à une vue dans un navigateur, nous devons la mapper (établir une correspondance avec) à une URL.
@@ -701,12 +701,12 @@ Ces configurations d'URL sont définies dans chaque application Django au sein d
 </div>
 </div>
 
-<div id="outline-container-org16a6f79" class="outline-4">
-<h4 id="org16a6f79"><span class="section-number-4">4.4.2.</span> Définir une URLconf pour l'application</h4>
+<div id="outline-container-org2252dcb" class="outline-4">
+<h4 id="org2252dcb"><span class="section-number-4">4.4.2.</span> Définir une URLconf pour l'application</h4>
 <div class="outline-text-4" id="text-4-4-2">
 </div>
 <ol class="org-ol">
-<li><a id="org2c500b1"></a>Exemple<br />
+<li><a id="org6421731"></a>Exemple<br />
 <div class="outline-text-5" id="text-4-4-2-1">
 <p>
 Pour définir une URLconf pour l'application de sondages, créez un fichier <code>polls/urls.py</code> avec le contenu suivant :
@@ -726,7 +726,7 @@ Pour définir une URLconf pour l'application de sondages, créez un fichier <cod
 </div>
 </li>
 
-<li><a id="org2fd39c6"></a>La fonction <code>path(route, view, kwargs=None, name=None)</code><br />
+<li><a id="org93a57b9"></a>La fonction <code>path(route, view, kwargs=None, name=None)</code><br />
 <div class="outline-text-5" id="text-4-4-2-2">
 <p>
 La fonction <code>path()</code> reçoit quatre paramètres, dont deux sont obligatoires : <code>route</code> et <code>view</code>, et deux facultatifs : <code>kwargs</code> et <code>name</code>.
@@ -777,7 +777,7 @@ La fonction <code>path()</code> reçoit quatre paramètres, dont deux sont oblig
 </div>
 </li>
 
-<li><a id="org4f9099c"></a>Sur l'utilité de <code>name</code> dans les gabarits utilisant <code>url</code><br />
+<li><a id="orgf0a45c0"></a>Sur l'utilité de <code>name</code> dans les gabarits utilisant <code>url</code><br />
 <div class="outline-text-5" id="text-4-4-2-3">
 <p>
 Source : <a href="https://stackoverflow.com/a/68307313/5952631">https://stackoverflow.com/a/68307313/5952631</a>
@@ -812,7 +812,7 @@ c'est une fonctionnalité géniale de Django.
 </div>
 </li>
 
-<li><a id="orgeb23c32"></a>Répertoire de l'application<br />
+<li><a id="orgb58750f"></a>Répertoire de l'application<br />
 <div class="outline-text-5" id="text-4-4-2-4">
 <p>
 Votre répertoire d'applications devrait maintenant ressembler à :
@@ -836,12 +836,12 @@ Votre répertoire d'applications devrait maintenant ressembler à :
 </ol>
 </div>
 
-<div id="outline-container-org7dc3c18" class="outline-4">
-<h4 id="org7dc3c18"><span class="section-number-4">4.4.3.</span> Inclure l'URLconf de l'application dans l'URLconf globale du projet</h4>
+<div id="outline-container-orgc87f3ba" class="outline-4">
+<h4 id="orgc87f3ba"><span class="section-number-4">4.4.3.</span> Inclure l'URLconf de l'application dans l'URLconf globale du projet</h4>
 <div class="outline-text-4" id="text-4-4-3">
 </div>
 <ol class="org-ol">
-<li><a id="org1433f52"></a>Exemple<br />
+<li><a id="org0fa1ba3"></a>Exemple<br />
 <div class="outline-text-5" id="text-4-4-3-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #0000FF;">from</span> django.contrib <span style="color: #0000FF;">import</span> admin
@@ -858,7 +858,7 @@ Votre répertoire d'applications devrait maintenant ressembler à :
 </div>
 </li>
 
-<li><a id="org531e5b2"></a>La fonction <code>include()</code><br />
+<li><a id="org55b9d8b"></a>La fonction <code>include()</code><br />
 <div class="outline-text-5" id="text-4-4-3-2">
 <p>
 La fonction <code>include()</code> permet de référencer et d'inclure d'autres configurations d'URL. Quand Django rencontre un <code>include()</code>, il tronque le bout d'URL qui correspondait jusque là et passe la chaîne de caractères restante à la configuration d'URL incluse pour continuer le traitement.
@@ -884,7 +884,7 @@ L'idée derrière <code>include()</code> est de faciliter la connexion d'URL. Co
 </li>
 
 
-<li><a id="org8e28d36"></a>Quand utiliser include()<br />
+<li><a id="org5065b0f"></a>Quand utiliser include()<br />
 <div class="outline-text-5" id="text-4-4-3-3">
 <p>
 Alors que <code>admin.site.urls</code> utilise systématiquement <code>path()</code> et qu'on pourrait ajouter d'autre urls dans l'URLconf globale grâce à <code>path()</code>,  il est plutôt conseillé d'utiliser <code>include()</code> lorsque l'on veut inclure d'autres motifs d'URL. Ces motifs d'urls seront alors placés dans les URLConf des applications où l'on fera usage de <code>path()</code>. 
@@ -899,8 +899,8 @@ Cela permet de structurer les URL de manière modulaire, en les séparant en plu
 </div>
 </div>
 
-<div id="outline-container-orga612fb8" class="outline-3">
-<h3 id="orga612fb8"><span class="section-number-3">4.5.</span> Relancer ou non le serveur</h3>
+<div id="outline-container-org2ab5fa9" class="outline-3">
+<h3 id="org2ab5fa9"><span class="section-number-3">4.5.</span> Relancer ou non le serveur</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 Si l'on écrit <code>print("Je viens d'exécuter le fichier mysite/urls.py")</code> dans le fichier <code>mysite/urls.py</code> et que l'on écrit <code>print(f"Je viens d'exécuter le fichier {app_name}/urls.py")</code> dans le fichier <code>polls/url.py</code> puis qu'on relance le serveur, on obtient: 
@@ -965,16 +965,16 @@ Quit the server with CONTROL-C.
 
 
 
-<div id="outline-container-org0acf4d4" class="outline-3">
-<h3 id="org0acf4d4"><span class="section-number-3">4.6.</span> Les middlewares</h3>
+<div id="outline-container-org50b88dd" class="outline-3">
+<h3 id="org50b88dd"><span class="section-number-3">4.6.</span> Les middlewares</h3>
 <div class="outline-text-3" id="text-4-6">
 <p>
 Un middleware dans Django est une classe qui intervient dans le processus de traitement des requêtes et des réponses. Il agit comme un "intermédiaire" entre le serveur web et les vues de l'application. Les middlewares permettent de manipuler ou d'interagir avec les requêtes (avant qu'elles n'atteignent les vues) et les réponses (avant qu'elles ne soient envoyées au client).
 </p>
 </div>
 
-<div id="outline-container-orga6130ac" class="outline-4">
-<h4 id="orga6130ac"><span class="section-number-4">4.6.1.</span> Fonctionnement d'un middleware</h4>
+<div id="outline-container-orgabf067e" class="outline-4">
+<h4 id="orgabf067e"><span class="section-number-4">4.6.1.</span> Fonctionnement d'un middleware</h4>
 <div class="outline-text-4" id="text-4-6-1">
 <ul class="org-ul">
 <li>Requête entrante : Le middleware peut modifier ou inspecter la requête avant qu'elle ne soit transmise à la vue.</li>
@@ -983,8 +983,8 @@ Un middleware dans Django est une classe qui intervient dans le processus de tra
 </div>
 </div>
 
-<div id="outline-container-org769e999" class="outline-4">
-<h4 id="org769e999"><span class="section-number-4">4.6.2.</span> Exemples d’utilisation courante des middlewares</h4>
+<div id="outline-container-org2f2ed62" class="outline-4">
+<h4 id="org2f2ed62"><span class="section-number-4">4.6.2.</span> Exemples d’utilisation courante des middlewares</h4>
 <div class="outline-text-4" id="text-4-6-2">
 <ul class="org-ul">
 <li>Authentification : Vérifier si un utilisateur est authentifié avant d'accéder à certaines pages.</li>
@@ -994,8 +994,8 @@ Un middleware dans Django est une classe qui intervient dans le processus de tra
 </ul>
 </div>
 </div>
-<div id="outline-container-org90c7107" class="outline-4">
-<h4 id="org90c7107"><span class="section-number-4">4.6.3.</span> Exemple simple de middleware</h4>
+<div id="outline-container-orga7a0473" class="outline-4">
+<h4 id="orga7a0473"><span class="section-number-4">4.6.3.</span> Exemple simple de middleware</h4>
 <div class="outline-text-4" id="text-4-6-3">
 <p>
 Imaginons que l'on veuille ajouter un middleware qui affiche un message à chaque requête entrante et sortante.
@@ -1063,8 +1063,8 @@ Apr&#232;s la vue
 </div>
 </div>
 
-<div id="outline-container-orgad16927" class="outline-4">
-<h4 id="orgad16927"><span class="section-number-4">4.6.4.</span> Cycle complet des middlewares</h4>
+<div id="outline-container-orgac075e5" class="outline-4">
+<h4 id="orgac075e5"><span class="section-number-4">4.6.4.</span> Cycle complet des middlewares</h4>
 <div class="outline-text-4" id="text-4-6-4">
 <p>
 Le cycle du middleware suit le processus suivant :
@@ -1080,8 +1080,8 @@ Le cycle du middleware suit le processus suivant :
 </div>
 </div>
 
-<div id="outline-container-orge47fe76" class="outline-4">
-<h4 id="orge47fe76"><span class="section-number-4">4.6.5.</span> Utilité des middlewares</h4>
+<div id="outline-container-org5b198f5" class="outline-4">
+<h4 id="org5b198f5"><span class="section-number-4">4.6.5.</span> Utilité des middlewares</h4>
 <div class="outline-text-4" id="text-4-6-5">
 <p>
 Les middlewares sont extrêmement utiles pour centraliser certaines tâches répétitives, comme la journalisation des requêtes, la gestion de la sécurité, l'analyse des requêtes ou l'ajout de données spécifiques à chaque réponse.
@@ -1091,16 +1091,16 @@ Les middlewares sont extrêmement utiles pour centraliser certaines tâches rép
 </div>
 </div>
 
-<div id="outline-container-org8d4eb4a" class="outline-2">
-<h2 id="org8d4eb4a"><span class="section-number-2">5.</span> Configuration de la base de données</h2>
+<div id="outline-container-orge15d023" class="outline-2">
+<h2 id="orge15d023"><span class="section-number-2">5.</span> Configuration de la base de données</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Source : <a href="https://docs.djangoproject.com/fr/5.0/intro/tutorial02/">https://docs.djangoproject.com/fr/5.0/intro/tutorial02/</a>
 </p>
 </div>
 
-<div id="outline-container-orge0e9c3b" class="outline-3">
-<h3 id="orge0e9c3b"><span class="section-number-3">5.1.</span> Choix de la base de données</h3>
+<div id="outline-container-orgda011a8" class="outline-3">
+<h3 id="orgda011a8"><span class="section-number-3">5.1.</span> Choix de la base de données</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 La configuration par défaut utilise SQLite. Si vous débutez avec les bases de données ou que vous voulez juste essayer Django, il s'agit du choix le plus simple. Pour le stockage local des données avec une faible concurrence de l'écriture et moins d'un téraoctet de contenu, SQLite est la meilleure solution. SQLite est rapide et fiable et ne nécessite aucune configuration ou maintenance. SQLite est inclus dans Python, vous n'aurez donc rien d'autre à installer pour utiliser ce type de base de données.
@@ -1116,8 +1116,8 @@ S'il existe de nombreux programmes clients qui envoient SQL à la même base de 
 </div>
 </div>
 
-<div id="outline-container-org6fb0bdc" class="outline-3">
-<h3 id="org6fb0bdc"><span class="section-number-3">5.2.</span> Création des tables associées</h3>
+<div id="outline-container-org8f12721" class="outline-3">
+<h3 id="org8f12721"><span class="section-number-3">5.2.</span> Création des tables associées</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 La commande <code>migrate</code> examine le réglage <code>INSTALLED_APPS</code> dans votre fichier <code>mysite/settings.py</code> et crée les tables de base de données nécessaires en fonction des réglages de base de données et des migrations de base de données contenues dans l'application (nous les aborderons plus tard). Vous verrez apparaître un message pour chaque migration appliquée.
@@ -1125,8 +1125,8 @@ La commande <code>migrate</code> examine le réglage <code>INSTALLED_APPS</code>
 </div>
 </div>
 
-<div id="outline-container-orgdb678f3" class="outline-3">
-<h3 id="orgdb678f3"><span class="section-number-3">5.3.</span> Examen des tables de votre base de données</h3>
+<div id="outline-container-org65f5c90" class="outline-3">
+<h3 id="org65f5c90"><span class="section-number-3">5.3.</span> Examen des tables de votre base de données</h3>
 <div class="outline-text-3" id="text-5-3">
 <p>
 Pour afficher les tables créées par Django, si cela vous intéresse, lancez le client en ligne de commande de votre base de données. Par exemple pour SQLite:
@@ -1149,12 +1149,12 @@ Puis, tapez l'une des commandes suivantes:
 </div>
 </div>
 
-<div id="outline-container-org41fc9b9" class="outline-3">
-<h3 id="org41fc9b9"><span class="section-number-3">5.4.</span> Création des modèles</h3>
+<div id="outline-container-org345639f" class="outline-3">
+<h3 id="org345639f"><span class="section-number-3">5.4.</span> Création des modèles</h3>
 <div class="outline-text-3" id="text-5-4">
 </div>
-<div id="outline-container-org9f42f03" class="outline-4">
-<h4 id="org9f42f03"><span class="section-number-4">5.4.1.</span> Philosophie des modèles</h4>
+<div id="outline-container-orgb6730d3" class="outline-4">
+<h4 id="orgb6730d3"><span class="section-number-4">5.4.1.</span> Philosophie des modèles</h4>
 <div class="outline-text-4" id="text-5-4-1">
 <p>
 Dans la programmation orientée objet, un champ (ou attribut) est une propriété d'un objet. Cette propriété a un nom, un type de données et une valeur.
@@ -1171,8 +1171,8 @@ Dans la programmation orientée objet, un champ (ou attribut) est une propriét�
 </div>
 </div>
 
-<div id="outline-container-orgdd04a3e" class="outline-4">
-<h4 id="orgdd04a3e"><span class="section-number-4">5.4.2.</span> Modèles dans notre application de sondage</h4>
+<div id="outline-container-orga64f3af" class="outline-4">
+<h4 id="orga64f3af"><span class="section-number-4">5.4.2.</span> Modèles dans notre application de sondage</h4>
 <div class="outline-text-4" id="text-5-4-2">
 <p>
 Nous allons créer deux modèles : <code>Question</code> et <code>Choice</code> (choix).
@@ -1215,11 +1215,11 @@ Chaque attribut représentant un champ de la base de données pour ce modèle.
 </p>
 
 <p>
-Notez que nous définissons une relation, en utilisant <code>ForeignKey</code>. Cela indique à Django que chaque vote (<code>Choice</code>) n'est relié qu'à une seule Question. Django propose tous les modèles classiques de relations : plusieurs-à-un, plusieurs-à-plusieurs, un-à-un.
+Notez que nous définissons une <b>relation</b>, en utilisant <code>ForeignKey</code>. Cela indique à Django que chaque vote (<code>Choice</code>) n'est relié qu'à une seule Question. Django propose tous les modèles classiques de relations : plusieurs-à-un, plusieurs-à-plusieurs, un-à-un.
 </p>
 
 <p>
-Si un modèle possède un champ <code>ForeignKey</code>, les instances du modèle de clé étrangère auront accès à un Manager renvoyant toutes les instances du premier modèle. Par défaut, ce Manager se nomme <code>XXX_set</code>, où <code>XXX</code> est le nom du modèle source en minuscules (ici <code>choice_set</code>). Ce Manager renvoie des objets <code>QuerySet</code>, qui peuvent être filtrés et manipulés. Un <code>QuerySet</code> représente une collection d’objets de la base de données. Il peut comporter zéro, un ou plusieurs filtres. Les filtres réduisent les résultats de requêtes en fonction des paramètres donnés. En termes <code>SQL</code>, un <code>QuerySet</code> équivaut à une commande <code>SELECT</code> et un filtre correspond à une clause restrictive telle que <code>WHERE</code> ou <code>LIMIT</code>.
+Si un modèle possède un champ <code>ForeignKey</code>, les instances du modèle de clé étrangère auront accès à un <i>Manager</i> renvoyant toutes les instances du premier modèle. Par défaut, ce <i>Manager</i> se nomme <code>XXX_set</code>, où <code>XXX</code> est le nom du modèle source en minuscules (ici le nom par défaut du <i>Manager</i> sera donc <code>choice_set</code>). Ce <i>Manager</i> renvoie des objets <code>QuerySet</code>, qui peuvent être filtrés et manipulés. Un <code>QuerySet</code> représente une collection d’objets de la base de données. Il peut comporter zéro, un ou plusieurs filtres. Les filtres réduisent les résultats de requêtes en fonction des paramètres donnés. <b>En termes <code>SQL</code>, un <code>QuerySet</code> équivaut à une commande <code>SELECT</code></b> et un filtre correspond à une clause restrictive telle que <code>WHERE</code> ou <code>LIMIT</code>.
 </p>
 
 <p>
@@ -1253,12 +1253,12 @@ Un champ Field peut aussi autoriser des paramètres facultatifs ; dans notre cas
 
 
 
-<div id="outline-container-org170c53a" class="outline-2">
-<h2 id="org170c53a"><span class="section-number-2">6.</span> Inclure l'application au projet</h2>
+<div id="outline-container-org04ad133" class="outline-2">
+<h2 id="org04ad133"><span class="section-number-2">6.</span> Inclure l'application au projet</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgcd602fd" class="outline-3">
-<h3 id="orgcd602fd"><span class="section-number-3">6.1.</span> Philosophie</h3>
+<div id="outline-container-org216cbeb" class="outline-3">
+<h3 id="org216cbeb"><span class="section-number-3">6.1.</span> Philosophie</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Les applications de Django sont comme des pièces d'un jeu de construction : vous pouvez utiliser une application dans plusieurs projets, et vous pouvez distribuer les applications, parce qu'elles n'ont pas besoin d'être liées à une installation Django particulière.
@@ -1266,8 +1266,8 @@ Les applications de Django sont comme des pièces d'un jeu de construction : vou
 </div>
 </div>
 
-<div id="outline-container-org4b49627" class="outline-3">
-<h3 id="org4b49627"><span class="section-number-3">6.2.</span> Étape 1 : créer ou modifier les modèles</h3>
+<div id="outline-container-org770885b" class="outline-3">
+<h3 id="org770885b"><span class="section-number-3">6.2.</span> Étape 1 : créer ou modifier les modèles</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 Pour inclure l'application dans notre projet, nous avons besoin d'ajouter une référence à sa classe de configuration dans le réglage <code>INSTALLED_APPS</code>.
@@ -1297,8 +1297,8 @@ Maintenant, Django sait qu'il doit inclure l'application polls.
 </div>
 </div>
 
-<div id="outline-container-orge33a274" class="outline-3">
-<h3 id="orge33a274"><span class="section-number-3">6.3.</span> Étape 2 : créer des migrations correspondant à ces changements</h3>
+<div id="outline-container-org021b7b3" class="outline-3">
+<h3 id="org021b7b3"><span class="section-number-3">6.3.</span> Étape 2 : créer des migrations correspondant à ces changements</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Exécutons une autre commande :
@@ -1318,7 +1318,7 @@ Vous pouvez consulter la migration pour vos nouveaux modèles si vous le voulez 
 </p>
 
 <p>
-Les migrations sont très puissantes et permettent de gérer les changements de modèles dans le temps, au cours du développement d'un projet, sans devoir supprimer la base de données ou ses tables et en refaire de nouvelles. Une migration s'attache à mettre à jour la base de données en live, sans perte de données.
+Les migrations sont très puissantes et permettent de gérer les changements de modèles dans le temps, au cours du développement d'un projet, sans devoir supprimer la base de données ou ses tables et en refaire de nouvelles. Une migration s'attache à mettre à jour la base de données en temps réel, sans perte de données.
 </p>
 
 <p>
@@ -1327,8 +1327,8 @@ Si cela vous intéresse, vous pouvez exécuter <code>python manage.py check</cod
 </div>
 </div>
 
-<div id="outline-container-org4634211" class="outline-3">
-<h3 id="org4634211"><span class="section-number-3">6.4.</span> Étape 3 : appliquer ces modifications à la base de données</h3>
+<div id="outline-container-org2c13fa8" class="outline-3">
+<h3 id="org2c13fa8"><span class="section-number-3">6.4.</span> Étape 3 : appliquer ces modifications à la base de données</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 Maintenant, exécutez à nouveau la commande <code>migrate</code> pour créer les tables des modèles dans votre base de données :
@@ -1348,11 +1348,11 @@ Maintenant, exécutez à nouveau la commande <code>migrate</code> pour créer le
 </div>
 
 
-<div id="outline-container-orge953abe" class="outline-2">
-<h2 id="orge953abe"><span class="section-number-2">7.</span> L'interface de programmation (API)</h2>
+<div id="outline-container-orgc1ddfc8" class="outline-2">
+<h2 id="orgc1ddfc8"><span class="section-number-2">7.</span> L'interface de programmation (API)</h2>
 <div class="outline-text-2" id="text-7">
 <p>
-Maintenant, utilisons un <b>shell interactif Python</b> pour bénéficier de l'API que Django met gratuitement à notre disposition.
+Maintenant, utilisons un <b>shell interactif Python</b> pour bénéficier de l'API que Django met gratuitement à notre disposition pour manipuler les données à travers les modèles.
 </p>
 
 <p>
@@ -1364,8 +1364,8 @@ Pour lancer un shell Python, utilisez cette commande :
 </div>
 </div>
 
-<div id="outline-container-org7d93a29" class="outline-3">
-<h3 id="org7d93a29"><span class="section-number-3">7.1.</span> Importer les modèles d'une application</h3>
+<div id="outline-container-orgc3d1267" class="outline-3">
+<h3 id="orgc3d1267"><span class="section-number-3">7.1.</span> Importer les modèles d'une application</h3>
 <div class="outline-text-3" id="text-7-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #8D8D84;"># </span><span style="color: #8D8D84; font-style: italic;">Importe les mod&#232;les de l'application polls</span>
@@ -1375,12 +1375,13 @@ Pour lancer un shell Python, utilisez cette commande :
 </div>
 </div>
 
-<div id="outline-container-org6484db3" class="outline-3">
-<h3 id="org6484db3"><span class="section-number-3">7.2.</span> Lister tous les objets (instances d'une classe de modèle)</h3>
+<div id="outline-container-org771b050" class="outline-3">
+<h3 id="org771b050"><span class="section-number-3">7.2.</span> Lister tous les objets (instances d'une classe de modèle)</h3>
 <div class="outline-text-3" id="text-7-2">
-<p>
-On obtient un <code>QuerySet</code> en utilisant le Manager du modèle. Chaque modèle a au moins un <code>Manager</code> ; il s’appelle <code>objects</code> par défaut. 
-</p>
+<ul class="org-ul">
+<li>On obtient un <code>QuerySet</code> en utilisant le <i>Manager</i> du modèle.</li>
+<li>Chaque modèle a au moins un <i>Manager</i> qui, par défaut, s’appelle <code>objects</code>.</li>
+</ul>
 
 
 <p>
@@ -1410,12 +1411,12 @@ De même pour lister les choix associés à toutes les questions:
 
 
 
-<div id="outline-container-org1127134" class="outline-3">
-<h3 id="org1127134"><span class="section-number-3">7.3.</span> Créer de nouveaux objets</h3>
+<div id="outline-container-org3893544" class="outline-3">
+<h3 id="org3893544"><span class="section-number-3">7.3.</span> Créer de nouveaux objets</h3>
 <div class="outline-text-3" id="text-7-3">
 </div>
-<div id="outline-container-orga076d98" class="outline-4">
-<h4 id="orga076d98"><span class="section-number-4">7.3.1.</span> Créer une nouvelle question</h4>
+<div id="outline-container-orgc1bb28f" class="outline-4">
+<h4 id="orgc1bb28f"><span class="section-number-4">7.3.1.</span> Créer une nouvelle question</h4>
 <div class="outline-text-4" id="text-7-3-1">
 <p>
 Un objet <code>question</code> a deux attributs: <code>question_text</code> et  <code>pub_date</code>
@@ -1434,8 +1435,8 @@ La prise en charge des fuseaux horaires (timezone) est activée dans le fichier 
 </div>
 </div>
 
-<div id="outline-container-orgaed6d69" class="outline-4">
-<h4 id="orgaed6d69"><span class="section-number-4">7.3.2.</span> Sauvegarder une question dans la base de données</h4>
+<div id="outline-container-org23700b5" class="outline-4">
+<h4 id="org23700b5"><span class="section-number-4">7.3.2.</span> Sauvegarder une question dans la base de données</h4>
 <div class="outline-text-4" id="text-7-3-2">
 <p>
 Vous devez appeler <code>save()</code> explicitement.
@@ -1457,8 +1458,8 @@ Maintenant la question a un ID puisque la commande <code>migrate</code> a ajout�
 </div>
 </div>
 
-<div id="outline-container-orgf0018cb" class="outline-4">
-<h4 id="orgf0018cb"><span class="section-number-4">7.3.3.</span> Ajouter des méthodes <code>__str__()</code> aux modèles</h4>
+<div id="outline-container-org8833c68" class="outline-4">
+<h4 id="org8833c68"><span class="section-number-4">7.3.3.</span> Ajouter des méthodes <code>__str__()</code> aux modèles</h4>
 <div class="outline-text-4" id="text-7-3-3">
 <p>
 La méthode spéciale <code>__str__</code> permet d'indiquer la représentation en chaîne de caractères d'un objet.
@@ -1497,8 +1498,8 @@ Dorénavant, lister les objets transmettra une liste des textes qui avaient ét�
 </div>
 </div>
 
-<div id="outline-container-org899bf2d" class="outline-4">
-<h4 id="org899bf2d"><span class="section-number-4">7.3.4.</span> Ajouter une méthode à un modèle</h4>
+<div id="outline-container-org47b4a93" class="outline-4">
+<h4 id="org47b4a93"><span class="section-number-4">7.3.4.</span> Ajouter une méthode à un modèle</h4>
 <div class="outline-text-4" id="text-7-3-4">
 <p>
 Modifiez <code>polls/models.py</code>:
@@ -1521,8 +1522,8 @@ Modifiez <code>polls/models.py</code>:
 </div>
 </div>
 
-<div id="outline-container-org6763144" class="outline-4">
-<h4 id="org6763144"><span class="section-number-4">7.3.5.</span> Afficher les choix associés à une question</h4>
+<div id="outline-container-org31d9f5c" class="outline-4">
+<h4 id="org31d9f5c"><span class="section-number-4">7.3.5.</span> Afficher les choix associés à une question</h4>
 <div class="outline-text-4" id="text-7-3-5">
 <p>
 Sélectionnez une question grâce à la méthode <code>get()</code> du Manager <code>objects</code> :
@@ -1549,8 +1550,8 @@ Afficher tous les choix associés à cette question (donc aucun jusqu'à présen
 </div>
 </div>
 
-<div id="outline-container-orgd324fa3" class="outline-4">
-<h4 id="orgd324fa3"><span class="section-number-4">7.3.6.</span> Créer de nouveaux choix associés à une question</h4>
+<div id="outline-container-orgdc935f0" class="outline-4">
+<h4 id="orgdc935f0"><span class="section-number-4">7.3.6.</span> Créer de nouveaux choix associés à une question</h4>
 <div class="outline-text-4" id="text-7-3-6">
 <p>
 Donnons quelques choix à cette question.
@@ -1594,8 +1595,8 @@ Créez trois choix:
 </div>
 </div>
 
-<div id="outline-container-org974826e" class="outline-4">
-<h4 id="org974826e"><span class="section-number-4">7.3.7.</span> Relations</h4>
+<div id="outline-container-orgec49fd7" class="outline-4">
+<h4 id="orgec49fd7"><span class="section-number-4">7.3.7.</span> Relations</h4>
 <div class="outline-text-4" id="text-7-3-7">
 <p>
 Les objets de type Choice ont un accès API à l'objet de type Question qui leur est associé.
@@ -1641,12 +1642,12 @@ Et vice versa, les objets de type <code>Question</code> ont accès aux objets de
 </div>
 
 
-<div id="outline-container-org556a67f" class="outline-3">
-<h3 id="org556a67f"><span class="section-number-3">7.4.</span> Filtrer</h3>
+<div id="outline-container-orgca96070" class="outline-3">
+<h3 id="orgca96070"><span class="section-number-3">7.4.</span> Filtrer</h3>
 <div class="outline-text-3" id="text-7-4">
 </div>
-<div id="outline-container-orgc1db31a" class="outline-4">
-<h4 id="orgc1db31a"><span class="section-number-4">7.4.1.</span> Filtrer les enregistrements par valeur de champ</h4>
+<div id="outline-container-org7e64310" class="outline-4">
+<h4 id="org7e64310"><span class="section-number-4">7.4.1.</span> Filtrer les enregistrements par valeur de champ</h4>
 <div class="outline-text-4" id="text-7-4-1">
 <div class="org-src-container">
 <pre class="src src-python">&gt;&gt;&gt; Question.objects.<span style="color: #006FE0;">filter</span>(<span style="color: #006FE0;">id</span>=1)
@@ -1687,8 +1688,8 @@ Si aucun élément ne correspond à vos critères, <code>filter()</code> renvoie
 </div>
 </div>
 
-<div id="outline-container-org3b97fac" class="outline-4">
-<h4 id="org3b97fac"><span class="section-number-4">7.4.2.</span> Filtrer les choix</h4>
+<div id="outline-container-orge2ffe74" class="outline-4">
+<h4 id="orge2ffe74"><span class="section-number-4">7.4.2.</span> Filtrer les choix</h4>
 <div class="outline-text-4" id="text-7-4-2">
 <p>
 L'API suit automatiquement les relations autant que vous en avez besoin.
@@ -1712,8 +1713,8 @@ Trouvez tous les choix pour toute question dont la <code>date_pub</code> est cet
 </div>
 </div>
 
-<div id="outline-container-orgb45993f" class="outline-4">
-<h4 id="orgb45993f"><span class="section-number-4">7.4.3.</span> Filtrer puis supprimer</h4>
+<div id="outline-container-org9dfa657" class="outline-4">
+<h4 id="org9dfa657"><span class="section-number-4">7.4.3.</span> Filtrer puis supprimer</h4>
 <div class="outline-text-4" id="text-7-4-3">
 <p>
 Supprimons l'un des choix. Utilisez <code>delete()</code> pour cela :
@@ -1728,8 +1729,8 @@ Supprimons l'un des choix. Utilisez <code>delete()</code> pour cela :
 </div>
 </div>
 
-<div id="outline-container-org7392366" class="outline-3">
-<h3 id="org7392366"><span class="section-number-3">7.5.</span> Obtenir un objet</h3>
+<div id="outline-container-orgff92368" class="outline-3">
+<h3 id="orgff92368"><span class="section-number-3">7.5.</span> Obtenir un objet</h3>
 <div class="outline-text-3" id="text-7-5">
 <p>
 Si vous utilisez <code>get()</code>, vous attendez un (et un seul) élément correspondant à vos critères.
@@ -1771,8 +1772,8 @@ Vous devez donc toujours utiliser <code>if</code> dans un bloc <code>try.. excep
 </div>
 </div>
 
-<div id="outline-container-orge4bb763" class="outline-3">
-<h3 id="orge4bb763"><span class="section-number-3">7.6.</span> Raccourci pour obtenir un objet par clé primaire</h3>
+<div id="outline-container-org09597d2" class="outline-3">
+<h3 id="org09597d2"><span class="section-number-3">7.6.</span> Raccourci pour obtenir un objet par clé primaire</h3>
 <div class="outline-text-3" id="text-7-6">
 <p>
 La recherche par clé primaire est le cas le plus courant, donc   Django fournit un raccourci pour les recherches exactes par clé primaire.
@@ -1813,12 +1814,12 @@ Assurez-vous que notre méthode personnalisée a fonctionné :
 
 
 
-<div id="outline-container-org7037127" class="outline-2">
-<h2 id="org7037127"><span class="section-number-2">8.</span> Introduction au site d'administration de Django</h2>
+<div id="outline-container-orgeda0d39" class="outline-2">
+<h2 id="orgeda0d39"><span class="section-number-2">8.</span> Introduction au site d'administration de Django</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-orgf73cc0a" class="outline-3">
-<h3 id="orgf73cc0a"><span class="section-number-3">8.1.</span> Philosophie</h3>
+<div id="outline-container-org4715d4d" class="outline-3">
+<h3 id="org4715d4d"><span class="section-number-3">8.1.</span> Philosophie</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 L'interface d'administration n'est pas destinée à être utilisée par les visiteurs du site ; elle est conçue pour les administrateurs c'est-à-dire les gestionnaires du site qui éditent le contenu pour ajouter des nouvelles, des histoires, des événements, des résultats sportifs, etc.
@@ -1834,8 +1835,8 @@ Django a été écrit dans un environnement éditorial, avec une très nette sé
 </div>
 </div>
 
-<div id="outline-container-org09346d1" class="outline-3">
-<h3 id="org09346d1"><span class="section-number-3">8.2.</span> Création d'un utilisateur administrateur</h3>
+<div id="outline-container-orge101de4" class="outline-3">
+<h3 id="orge101de4"><span class="section-number-3">8.2.</span> Création d'un utilisateur administrateur</h3>
 <div class="outline-text-3" id="text-8-2">
 <p>
 Pour créer un compte administrateur, utilisez la commande suivante :
@@ -1849,8 +1850,8 @@ Pour créer un compte administrateur, utilisez la commande suivante :
 </div>
 
 
-<div id="outline-container-org2a3f677" class="outline-3">
-<h3 id="org2a3f677"><span class="section-number-3">8.3.</span> Démarrage du serveur de développement</h3>
+<div id="outline-container-orgf9d6c0f" class="outline-3">
+<h3 id="orgf9d6c0f"><span class="section-number-3">8.3.</span> Démarrage du serveur de développement</h3>
 <div class="outline-text-3" id="text-8-3">
 <p>
 Le site d'administration de Django est activé par défaut.
@@ -1876,8 +1877,8 @@ Comme la traduction est active par défaut, si vous définissez <code>LANGUAGE_C
 </div>
 </div>
 
-<div id="outline-container-orgb0399f0" class="outline-3">
-<h3 id="orgb0399f0"><span class="section-number-3">8.4.</span> Rendre l'application de sondage modifiable via l'interface d'admin</h3>
+<div id="outline-container-orga88c8ba" class="outline-3">
+<h3 id="orga88c8ba"><span class="section-number-3">8.4.</span> Rendre l'application de sondage modifiable via l'interface d'admin</h3>
 <div class="outline-text-3" id="text-8-4">
 <p>
 Il faut indiquer à l'admin que les objets <code>Question</code> ont une interface d'administration. Pour ceci, ouvrez le fichier
@@ -1914,12 +1915,12 @@ Si vous cliquez sur <code>Historique</code> en haut à droite de la page, vous v
 
 
 
-<div id="outline-container-org48a3a49" class="outline-2">
-<h2 id="org48a3a49"><span class="section-number-2">9.</span> Création de l'interface publique (les vues)</h2>
+<div id="outline-container-orgdd04947" class="outline-2">
+<h2 id="orgdd04947"><span class="section-number-2">9.</span> Création de l'interface publique (les vues)</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org8489646" class="outline-3">
-<h3 id="org8489646"><span class="section-number-3">9.1.</span> Aperçu</h3>
+<div id="outline-container-orga77630d" class="outline-3">
+<h3 id="orga77630d"><span class="section-number-3">9.1.</span> Aperçu</h3>
 <div class="outline-text-3" id="text-9-1">
 <ul class="org-ul">
 <li>Dans Django, les pages Web et les autres contenus sont générés par des vues.</li>
@@ -1944,8 +1945,8 @@ Un modèle (motif) d'URL est la forme générale d'une URL ; par exemple : <code
 </div>
 </div>
 
-<div id="outline-container-orgb26b8da" class="outline-3">
-<h3 id="orgb26b8da"><span class="section-number-3">9.2.</span> Écriture de vues supplémentaires</h3>
+<div id="outline-container-orgdde2c5e" class="outline-3">
+<h3 id="orgdde2c5e"><span class="section-number-3">9.2.</span> Écriture de vues supplémentaires</h3>
 <div class="outline-text-3" id="text-9-2">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #0000FF;">from</span> django.http <span style="color: #0000FF;">import</span> HttpResponse
@@ -1978,8 +1979,8 @@ Les autres vues acceptent un paramètre.
 </div>
 </div>
 
-<div id="outline-container-org94eaaea" class="outline-3">
-<h3 id="org94eaaea"><span class="section-number-3">9.3.</span> Transmission de paramètres aux vues</h3>
+<div id="outline-container-orga780273" class="outline-3">
+<h3 id="orga780273"><span class="section-number-3">9.3.</span> Transmission de paramètres aux vues</h3>
 <div class="outline-text-3" id="text-9-3">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #0000FF;">from</span> django.urls <span style="color: #0000FF;">import</span> path
@@ -2019,8 +2020,8 @@ La partie <code>question_id=34</code> vient de <code>&lt;int:question_id&gt;</co
 </div>
 </div>
 
-<div id="outline-container-org240c188" class="outline-3">
-<h3 id="org240c188"><span class="section-number-3">9.4.</span> Écriture de vues qui font réellement des choses</h3>
+<div id="outline-container-orgd680ecb" class="outline-3">
+<h3 id="orgd680ecb"><span class="section-number-3">9.4.</span> Écriture de vues qui font réellement des choses</h3>
 <div class="outline-text-3" id="text-9-4">
 <p>
 Source : <a href="https://docs.djangoproject.com/fr/5.0/intro/tutorial03/">https://docs.djangoproject.com/fr/5.0/intro/tutorial03/</a>
@@ -2035,8 +2036,8 @@ Votre vue peut lire des entrées depuis une base de données, ou pas. Elle peut 
 </p>
 </div>
 
-<div id="outline-container-org6863f32" class="outline-4">
-<h4 id="org6863f32"><span class="section-number-4">9.4.1.</span> Codage en dur sans gabarit</h4>
+<div id="outline-container-org99e51e0" class="outline-4">
+<h4 id="org99e51e0"><span class="section-number-4">9.4.1.</span> Codage en dur sans gabarit</h4>
 <div class="outline-text-4" id="text-9-4-1">
 <p>
 L'allure de la page est codée en dur dans la vue.
@@ -2052,8 +2053,8 @@ L'allure de la page est codée en dur dans la vue.
 </div>
 </div>
 
-<div id="outline-container-orgade2283" class="outline-4">
-<h4 id="orgade2283"><span class="section-number-4">9.4.2.</span> Codage avec gabarits</h4>
+<div id="outline-container-orgf81edec" class="outline-4">
+<h4 id="orgf81edec"><span class="section-number-4">9.4.2.</span> Codage avec gabarits</h4>
 <div class="outline-text-4" id="text-9-4-2">
 <p>
 Le système de gabarits de Django permet de séparer le style du code Python en créant un gabarit que la vue pourra utiliser.
@@ -2123,8 +2124,8 @@ Chargez la page en appelant l'URL <code>/polls/</code> dans votre navigateur et 
 </div>
 </div>
 
-<div id="outline-container-org7840d9d" class="outline-4">
-<h4 id="org7840d9d"><span class="section-number-4">9.4.3.</span> Codage propre avec gabarits</h4>
+<div id="outline-container-org69ed735" class="outline-4">
+<h4 id="org69ed735"><span class="section-number-4">9.4.3.</span> Codage propre avec gabarits</h4>
 <div class="outline-text-4" id="text-9-4-3">
 <p>
 Il est très courant de charger un gabarit, remplir un contexte et renvoyer un objet HttpResponse avec le résultat du gabarit interprété. Django fournit un raccourci pour cela : <code>render()</code>
@@ -2168,12 +2169,12 @@ Notez qu'une fois que nous avons fait ceci dans toutes nos vues, nous n'avons pl
 </div>
 </div>
 
-<div id="outline-container-org17781d5" class="outline-3">
-<h3 id="org17781d5"><span class="section-number-3">9.5.</span> Django et les espaces de noms (namespaces)</h3>
+<div id="outline-container-org84182a1" class="outline-3">
+<h3 id="org84182a1"><span class="section-number-3">9.5.</span> Django et les espaces de noms (namespaces)</h3>
 <div class="outline-text-3" id="text-9-5">
 </div>
-<div id="outline-container-org705b906" class="outline-4">
-<h4 id="org705b906"><span class="section-number-4">9.5.1.</span> Philosophie</h4>
+<div id="outline-container-org45961f6" class="outline-4">
+<h4 id="org45961f6"><span class="section-number-4">9.5.1.</span> Philosophie</h4>
 <div class="outline-text-4" id="text-9-5-1">
 <p>
 Il serait aussi possible de placer directement nos gabarits dans <code>polls/templates</code> (plutôt que dans un sous-répertoire <code>polls</code>), mais ce serait une mauvaise idée. Django choisit le premier gabarit qu'il trouve pour un nom donné et dans le cas où vous avez un gabarit de même nom dans une autre application, Django ne fera pas la différence. Il faut pouvoir indiquer à Django le bon gabarit, et la meilleure manière de faire cela est d'utiliser des espaces de noms. C'est-à-dire que nous plaçons ces gabarits dans un autre répertoire portant le nom de l'application.
@@ -2185,8 +2186,8 @@ Django permet de structurer les URLs de manière hiérarchique à l'aide d'espac
 </div>
 </div>
 
-<div id="outline-container-orged97e8d" class="outline-4">
-<h4 id="orged97e8d"><span class="section-number-4">9.5.2.</span> Exemple</h4>
+<div id="outline-container-org3b6e4f9" class="outline-4">
+<h4 id="org3b6e4f9"><span class="section-number-4">9.5.2.</span> Exemple</h4>
 <div class="outline-text-4" id="text-9-5-2">
 <p>
 Supposons que vous ayez deux applications dans votre projet Django, appelées <code>polls</code> et <code>blog</code>, et que chacune d'elles ait une vue appelée <code>vote</code>. Sans espaces de noms, Django ne saurait pas quelle vue <code>vote</code> appeler. En ajoutant un espace de noms, vous pouvez les distinguer :
@@ -2203,8 +2204,8 @@ Ceci est utilisé dans l'écriture <code>{% url 'polls:vote' question.id %}</cod
 </div>
 </div>
 
-<div id="outline-container-orgdfe66a9" class="outline-4">
-<h4 id="orgdfe66a9"><span class="section-number-4">9.5.3.</span> Conclusion</h4>
+<div id="outline-container-org2cbbfcc" class="outline-4">
+<h4 id="org2cbbfcc"><span class="section-number-4">9.5.3.</span> Conclusion</h4>
 <div class="outline-text-4" id="text-9-5-3">
 <p>
 Le <code>:</code> est donc essentiel pour spécifier l'espace de noms dans Django et pour différencier les vues lorsque vous avez des noms de vues similaires dans différentes applications.
@@ -2214,16 +2215,16 @@ Le <code>:</code> est donc essentiel pour spécifier l'espace de noms dans Djang
 </div>
 </div>
 
-<div id="outline-container-org73c7b54" class="outline-2">
-<h2 id="org73c7b54"><span class="section-number-2">10.</span> Écriture de formulaires</h2>
+<div id="outline-container-org2e244d8" class="outline-2">
+<h2 id="org2e244d8"><span class="section-number-2">10.</span> Écriture de formulaires</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Source : <a href="https://docs.djangoproject.com/fr/5.0/intro/tutorial04/">https://docs.djangoproject.com/fr/5.0/intro/tutorial04/</a>
 </p>
 </div>
 
-<div id="outline-container-orgb79702a" class="outline-3">
-<h3 id="orgb79702a"><span class="section-number-3">10.1.</span> Écriture d'un formulaire minimal</h3>
+<div id="outline-container-orgbc7017b" class="outline-3">
+<h3 id="orgbc7017b"><span class="section-number-3">10.1.</span> Écriture d'un formulaire minimal</h3>
 <div class="outline-text-3" id="text-10-1">
 <p>
 Nous allons mettre à jour le gabarit de la page de détail (<code>polls/details.html</code>) du tutoriel précédent, de manière à ce que le gabarit contienne une balise HTML &lt;form&gt; :
@@ -2247,8 +2248,8 @@ Nous allons mettre à jour le gabarit de la page de détail (<code>polls/details
 </div>
 </div>
 
-<div id="outline-container-org4496b51" class="outline-3">
-<h3 id="org4496b51"><span class="section-number-3">10.2.</span> Un résumé rapide</h3>
+<div id="outline-container-org92afcde" class="outline-3">
+<h3 id="org92afcde"><span class="section-number-3">10.2.</span> Un résumé rapide</h3>
 <div class="outline-text-3" id="text-10-2">
 <ul class="org-ul">
 <li>Ce gabarit affiche un bouton radio pour chaque choix de question. L'attribut value de chaque bouton radio correspond à l'ID du vote choisi. Le nom (name) de chaque bouton radio est "choice". Cela signifie que lorsque quelqu'un sélectionne l'un des boutons radio et valide le formulaire, les données POST choice=# (où # est l'identifiant du choix sélectionné) seront envoyées. Ce sont les concepts de base des formulaires HTML.</li>
@@ -2260,8 +2261,8 @@ Nous allons mettre à jour le gabarit de la page de détail (<code>polls/details
 </div>
 </div>
 
-<div id="outline-container-orgd26d4e3" class="outline-2">
-<h2 id="orgd26d4e3"><span class="section-number-2">11.</span> Affichage des résultats</h2>
+<div id="outline-container-org1d37b8a" class="outline-2">
+<h2 id="org1d37b8a"><span class="section-number-2">11.</span> Affichage des résultats</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 Reprenons les principes précédents pour afficher les résultats. 
@@ -2272,8 +2273,8 @@ Après le vote d'une personne dans une question, la vue <code>vote()</code> redi
 </p>
 </div>
 
-<div id="outline-container-orga5f1a26" class="outline-3">
-<h3 id="orga5f1a26"><span class="section-number-3">11.1.</span> Réécrivons la vue <code>results()</code> dans <code>polls/views.py</code> :</h3>
+<div id="outline-container-org71e401c" class="outline-3">
+<h3 id="org71e401c"><span class="section-number-3">11.1.</span> Réécrivons la vue <code>results()</code> dans <code>polls/views.py</code> :</h3>
 <div class="outline-text-3" id="text-11-1">
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #0000FF;">from</span> django.shortcuts <span style="color: #0000FF;">import</span> get_object_or_404, render
@@ -2290,8 +2291,8 @@ Cette vue requiert le gabarit <code>polls/results.html</code>.
 </div>
 </div>
 
-<div id="outline-container-orgc8c7ce7" class="outline-3">
-<h3 id="orgc8c7ce7"><span class="section-number-3">11.2.</span> Écrivons maintenant le gabarit <code>polls/results.html</code> :</h3>
+<div id="outline-container-org7525369" class="outline-3">
+<h3 id="org7525369"><span class="section-number-3">11.2.</span> Écrivons maintenant le gabarit <code>polls/results.html</code> :</h3>
 <div class="outline-text-3" id="text-11-2">
 <div class="org-src-container">
 <pre class="src src-html">&lt;<span style="color: #006699;">h1</span>&gt;<span style="color: #000000; font-weight: bold; text-decoration: underline;">{{ question.question_text }}</span>&lt;/<span style="color: #006699;">h1</span>&gt;
@@ -2310,8 +2311,8 @@ Cette vue requiert le gabarit <code>polls/results.html</code>.
 </div>
 
 
-<div id="outline-container-orga2a7dab" class="outline-2">
-<h2 id="orga2a7dab"><span class="section-number-2">12.</span> Utilisation des vues génériques</h2>
+<div id="outline-container-org8ec85b9" class="outline-2">
+<h2 id="org8ec85b9"><span class="section-number-2">12.</span> Utilisation des vues génériques</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 Les vues <code>index()</code>, <code>detail()</code> et <code>results()</code> sont très courtes et représentent un cas classique du développement Web : <b>récupérer les données depuis la base de données suivant un paramètre contenu dans l'URL, charger un gabarit et renvoyer le gabarit interprété</b>. Ce cas est tellement classique que Django propose un raccourci, appelé le système de <b>vues génériques</b>.
@@ -2337,8 +2338,8 @@ Nous allons convertir notre application de sondage pour qu'elle utilise le syst�
 </p>
 </div>
 
-<div id="outline-container-orgcd3d129" class="outline-3">
-<h3 id="orgcd3d129"><span class="section-number-3">12.1.</span> Écriture de l'URLconf</h3>
+<div id="outline-container-orgd2decb5" class="outline-3">
+<h3 id="orgd2decb5"><span class="section-number-3">12.1.</span> Écriture de l'URLconf</h3>
 <div class="outline-text-3" id="text-12-1">
 <p>
 La manière la plus directe d'utiliser des vues génériques est de les créer directement dans votre configuration d'URL. Si vous ne devez changer qu'un nombre restreint d'attributs d'une vue fondée sur une classe, vous pouvez les transmettre directement dans l'appel de méthode <code>as_view()</code>. Tout paramètre transmis à <code>as_view()</code> surcharge l'attribut de même nom de la classe.
@@ -2383,8 +2384,8 @@ Dans les vues basées sur les classes, <b>vous devez appeler la fonction <code>a
 </div>
 </div>
 
-<div id="outline-container-org64254b6" class="outline-3">
-<h3 id="org64254b6"><span class="section-number-3">12.2.</span> Écriture des vues</h3>
+<div id="outline-container-org76050a6" class="outline-3">
+<h3 id="org76050a6"><span class="section-number-3">12.2.</span> Écriture des vues</h3>
 <div class="outline-text-3" id="text-12-2">
 <p>
 Plutôt que de transmettre les paramètres directement dans l'appel de méthode <code>as_view()</code> , l'autre façon de faire, plus puissante, d'utiliser les vues génériques est d'hériter d'une vue existante et de surcharger ses attributs (comme <code>template_name</code>) ou ses méthodes (comme <code>get_queryset</code>) dans votre sous-classe pour fournir d'autres valeurs ou méthodes. 
@@ -2452,8 +2453,8 @@ Dans les parties précédentes de ce tutoriel, les templates ont été renseign�
 </div>
 </div>
 
-<div id="outline-container-org5af2cfd" class="outline-2">
-<h2 id="org5af2cfd"><span class="section-number-2">13.</span> Le client de test de Django</h2>
+<div id="outline-container-org61f3adf" class="outline-2">
+<h2 id="org61f3adf"><span class="section-number-2">13.</span> Le client de test de Django</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 Django fournit un Client de test pour simuler l'interaction d'un utilisateur avec le code au niveau des vues.
@@ -2507,16 +2508,16 @@ b<span style="color: #008000;">'\n    &lt;ul&gt;\n    \n        &lt;li&gt;&lt;a 
 </div>
 </div>
 
-<div id="outline-container-orge99b0f0" class="outline-2">
-<h2 id="orge99b0f0"><span class="section-number-2">14.</span> Introduction aux tests automatisés</h2>
+<div id="outline-container-org82f2541" class="outline-2">
+<h2 id="org82f2541"><span class="section-number-2">14.</span> Introduction aux tests automatisés</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 Source : <a href="https://docs.djangoproject.com/fr/5.0/intro/tutorial05/">https://docs.djangoproject.com/fr/5.0/intro/tutorial05/</a>
 </p>
 </div>
 
-<div id="outline-container-org7d4fc97" class="outline-3">
-<h3 id="org7d4fc97"><span class="section-number-3">14.1.</span> Que sont les tests automatisés ?</h3>
+<div id="outline-container-orgfc91e0b" class="outline-3">
+<h3 id="orgfc91e0b"><span class="section-number-3">14.1.</span> Que sont les tests automatisés ?</h3>
 <div class="outline-text-3" id="text-14-1">
 <p>
 Les tests sont des routines qui vérifient le fonctionnement de votre code. Dans les tests automatisés, le travail de test est fait pour vous par le système. 
@@ -2536,11 +2537,11 @@ L'écriture de tests est bien plus rentable que de passer des heures à tester m
 </div>
 </div>
 
-<div id="outline-container-org5713482" class="outline-3">
-<h3 id="org5713482"><span class="section-number-3">14.2.</span> Création d'un test de modèle</h3>
+<div id="outline-container-org8ae76a0" class="outline-3">
+<h3 id="org8ae76a0"><span class="section-number-3">14.2.</span> Création d'un test de modèle</h3>
 <div class="outline-text-3" id="text-14-2">
 <p>
-<a href="#org899bf2d">Nous avions ajouté</a> la méthode <code>was_published_recently()</code> au modèle <code>Question</code>. Elle est censée retourner <code>True</code> si la question a été publiée depuis moins d'un jour et <code>False</code> dans le cas contraire.
+<a href="#org47b4a93">Nous avions ajouté</a> la méthode <code>was_published_recently()</code> au modèle <code>Question</code>. Elle est censée retourner <code>True</code> si la question a été publiée depuis moins d'un jour et <code>False</code> dans le cas contraire.
 </p>
 
 <div class="org-src-container">
@@ -2594,8 +2595,8 @@ Placez ce qui suit dans le fichier <code>tests.py</code> de l'application <code>
 </div>
 
 
-<div id="outline-container-orgb6dca79" class="outline-3">
-<h3 id="orgb6dca79"><span class="section-number-3">14.3.</span> Lancement des tests</h3>
+<div id="outline-container-org9625e95" class="outline-3">
+<h3 id="org9625e95"><span class="section-number-3">14.3.</span> Lancement des tests</h3>
 <div class="outline-text-3" id="text-14-3">
 <p>
 Dans le terminal, nous pouvons lancer notre test :
@@ -2631,8 +2632,8 @@ AssertionError: True is not False
 </div>
 
 
-<div id="outline-container-orgde8ddf3" class="outline-3">
-<h3 id="orgde8ddf3"><span class="section-number-3">14.4.</span> Amélioration du modèle</h3>
+<div id="outline-container-org91f4ed0" class="outline-3">
+<h3 id="org91f4ed0"><span class="section-number-3">14.4.</span> Amélioration du modèle</h3>
 <div class="outline-text-3" id="text-14-4">
 <p>
 Corrigez la méthode dans <code>models.py</code> 
@@ -2663,8 +2664,8 @@ Destroying test database for alias <span style="color: #008000;">'default'</span
 </div>
 </div>
 
-<div id="outline-container-orgefb0bc4" class="outline-3">
-<h3 id="orgefb0bc4"><span class="section-number-3">14.5.</span> Des tests de modèle plus exhaustifs</h3>
+<div id="outline-container-orgbc10208" class="outline-3">
+<h3 id="orgbc10208"><span class="section-number-3">14.5.</span> Des tests de modèle plus exhaustifs</h3>
 <div class="outline-text-3" id="text-14-5">
 <p>
 Pendant que nous y sommes, ajoutons deux tests ainsi nous disposerons de trois tests qui permettent de confirmer que <code>Question.was_published_recently()</code> renvoie des valeurs correctes pour des questions:
@@ -2716,15 +2717,15 @@ Destroying test database for alias <span style="color: #008000;">'default'</span
 </div>
 </div>
 
-<div id="outline-container-org4adc8a9" class="outline-3">
-<h3 id="org4adc8a9"><span class="section-number-3">14.6.</span> Amélioration de la vue</h3>
+<div id="outline-container-orgcd39634" class="outline-3">
+<h3 id="orgcd39634"><span class="section-number-3">14.6.</span> Amélioration de la vue</h3>
 <div class="outline-text-3" id="text-14-6">
 <p>
 L'application de sondage publiera toute les questions, y compris celles dont le champ <code>pub_date</code> est situé dans le futur. Cela est à améliorer. Définir <code>pub_date</code> dans le futur devrait signifier que la question sera publiée à ce moment, mais qu'elle ne doit pas être visible avant cela.
 </p>
 
 <p>
-<a href="#org64254b6">Nous avions introduit la vue IndexView basée sur la classe ListView</a>:
+<a href="#org76050a6">Nous avions introduit la vue IndexView basée sur la classe ListView</a>:
 </p>
 
 <div class="org-src-container">
@@ -2773,8 +2774,8 @@ puis nous devons corriger la méthode <code>get_queryset</code> de cette façon 
 </div>
 
 
-<div id="outline-container-orgd216ed1" class="outline-3">
-<h3 id="orgd216ed1"><span class="section-number-3">14.7.</span> Test de la nouvelle vue</h3>
+<div id="outline-container-org75f1546" class="outline-3">
+<h3 id="org75f1546"><span class="section-number-3">14.7.</span> Test de la nouvelle vue</h3>
 <div class="outline-text-3" id="text-14-7">
 <p>
 Vous pourriez maintenant vérifier par vous-même que tout fonctionne comme prévu en lançant <code>runserver</code> et en accédant au site depuis votre navigateur. Il faudrait créer des questions avec des dates dans le passé et dans le futur et vérifier que seules celles qui ont été publiées apparaissent dans la liste. Mais vous ne voulez pas faire ce travail de test manuel chaque fois que vous effectuez une modification qui pourrait affecter ce comportement. Créons donc aussi un test automatisé pour tester la vue.
@@ -2795,7 +2796,7 @@ Ce nom de fonction (<code>reverse</code>) semble particulièrement ni évocateur
 </p>
 
 <p>
-<a href="#orgc873f7a">Nous avons vu</a>, qu'étant donné un modèle d'URL, Django utilise la fonction <code>path()</code> pour choisir la bonne vue et générer une page. Autrement dit, <i>path → vue et nom de la vue</i>. Mais parfois, comme lors d'une redirection, vous devez aller dans le sens inverse. C'est-à-dire, donner à Django le nom d'une vue, et attendre de Django qu'il génère l'URL appropriée. En d'autres termes, <i>nom de la vue → path</i>. 
+<a href="#orgeebaec5">Nous avons vu</a>, qu'étant donné un modèle d'URL, Django utilise la fonction <code>path()</code> pour choisir la bonne vue et générer une page. Autrement dit, <i>path → vue et nom de la vue</i>. Mais parfois, comme lors d'une redirection, vous devez aller dans le sens inverse. C'est-à-dire, donner à Django le nom d'une vue, et attendre de Django qu'il génère l'URL appropriée. En d'autres termes, <i>nom de la vue → path</i>. 
 </p>
 
 <p>
@@ -2885,7 +2886,7 @@ Ajoutez ce qui suit à <code>polls/tests.py</code>:
 </div>
 <div id="postamble" class="status">
 <p class="author">Auteur: Raoul Hatterer</p>
-<p class="date">Created: 2024-09-08 Sun 01:44</p>
+<p class="date">Created: 2024-09-09 Mon 02:05</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
